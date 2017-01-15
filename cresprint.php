@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Isaac Tozer</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script src="js/app.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans:300,400,600" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.ico" />
-    <!--<link href="https://fonts.googleapis.com/css?family=Lato:400|Open+Sans:300" rel="stylesheet">-->
+    <?php include("include/head.php"); ?>
     <script>
         // This is the URL of the video you want to load
         var videoUrl = 'http://www.vimeo.com/199090987';
@@ -36,13 +29,10 @@
 </head>
 <body>
 
-    <section id="tz-navigation-wrapper">
-        <div id="tz-header-top-line"></div>
-        <div id="tz-bread-crumb">
-            <div id="tz-logo"><img src="images/logo_50x50.png" width="44px" height="44px" alt="logo"></div>
-            <p><a href="http://www.isaactozer.com">Isaac Tozer</a> > CresPrint</p>
-        </div>
-    </section>
+    <?php
+        $page = "CresPrint";
+        include("include/secondary_navigation.php");
+    ?>
 
     <section id="tz-secondary-header">
         <h3>CresPrint</h3>

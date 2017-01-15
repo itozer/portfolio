@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Isaac Tozer</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="js/app.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans:300,400,600" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.ico" />
-    <!--<link href="https://fonts.googleapis.com/css?family=Lato:400|Open+Sans:300" rel="stylesheet">-->
+    <?php include("include/head.php");?>
 </head>
 <body>
 
@@ -50,7 +42,7 @@
             </div>
         </a>
 
-        <a class="tz-project">
+        <a class="tz-project" href="cresadmin.php">
             <div class="tz-project-image-wrapper">
                 <img class="tz-project-image tz-lazy" data-src="images/project_thumbs/813x504/cresadmin.png" width="813px" height="504px">
             </div>
@@ -62,7 +54,7 @@
             </div>
         </a>
 
-        <a class="tz-project">
+        <a class="tz-project" href="petdental.php">
             <div class="tz-project-image-wrapper">
                 <!--<img class="tz-project-image" src="images/pet_dental.png" width="813px" height="504px">-->
                 <img class="tz-project-image tz-lazy" data-src="images/project_thumbs/813x504/pet_dental.png" width="813px" height="504px">
@@ -78,7 +70,7 @@
             </div>
         </a>
 
-        <a class="tz-project">
+        <a class="tz-project" href="skydump.php">
             <div class="tz-project-image-wrapper">
                 <!--<img class="tz-project-image" src="images/skydump.png" width="813px" height="504px">-->
                 <img class="tz-project-image tz-lazy" data-src="images/project_thumbs/813x504/skydump.png" width="813px" height="504px">
@@ -92,7 +84,7 @@
         </a>
 
 
-        <a class="tz-project">
+        <a class="tz-project" href="grapestomp.php">
             <div class="tz-project-image-wrapper">
                 <!--<img class="tz-project-image" src="images/grape_stomp.png" width="813px" height="504px">-->
                 <img class="tz-project-image tz-lazy" data-src="images/project_thumbs/813x504/grape_stomp.png" width="813px" height="504px">

@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.no-transition,
+.no-transition * {
+    transition: none!important;
+}
+
+a:link {
+    color: #3f5765;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #3f5765;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3f5765;
+    color: #ff530d;
+    text-decoration: none;
+}
+
+a:active {
+    color: #3f5765;
+    color: #ff530d;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 3.9em;
+    line-height: 1.2em;
+    font-weight: 600;
+    margin-top: -1%;
+    color: #000;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    /*font-size: 2.8em;*/
+    font-size: 2.3em;
+    line-height: 1.2em;
+    font-weight: 300;
+    color: #000;
+
+    -webkit-animation: fadein 1.8s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1.8s; /* Firefox < 16 */
+    -ms-animation: fadein 1.8s; /* Internet Explorer */
+    -o-animation: fadein 1.8s; /* Opera < 12.1 */
+    animation: fadein 1.8s;
+}
+
+#tz-secondary-header h3 {
+    font-family: 'Lato', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-size: 3.7em;
+    line-height: 1.3em;
+    font-weight: 600;
+    color: #000;
+}
+
+#tz-secondary-header p {
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    font-weight: 300;
+    padding: 0 0 2% 0;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+}
+
+#tz-projects {
+    width: 100%;
+    /*
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    */
+    max-width: 1700px;
+}
+
+#tz-header {
+    height: 350px;
+    display: flex;
+    align-items: center;
+}
+
+#tz-header-top-line {
+    width: 100%;
+    height: 14px;
+    background: rgba(0,23,38,0.9);
+    display: block;
+	transition: height 0.30s ease-out 0s;
+}
+
+#tz-header-top-line.hide {
+    height: 0px;
+}
+
+#tz-navigation-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+/*
+#tz-header-top-line-secondary {
+    width: 100%;
+    height: 14px;
+    background: rgba(0,23,38,0.9);
+    display: block;
+	transition: height 0.30s ease-out 0s;
+}
+*/
+
+/*
+#tz-header-top-line-secondary.hide {
+    height: 0px;
+}
+*/
+
+/*
+#tz-header-fat-line {
+    width: 100%;
+    height: 350px;
+    background-color: #fff;
+	transition: all 0.25s linear 0s;
+}
+*/
+
+#tz-header-text-wrapper {
+    margin: auto;
+    width: 80%;
+    padding: 0 0.8%;
+    max-width: 1360px;
+}
+
+.tz-highlight {
+    color: #ff530d;
+    cursor: pointer;
+    font-size: 1.0em;
+	/*transition: all 0.12s ease-out 0s;
+    border-left: 8px solid #efefef;
+    border-right: 8px solid #efefef;
+    margin: 0 -8px 0 -8px;*/
+}
+
+.tz-highlight:hover {
+    /*
+    background-color: #bdd4de;
+    color: #3f5765;
+    border-left: 8px solid #bdd4de;
+    border-right: 8px solid #bdd4de;
+    margin: 0 -8px 0 -8px;
+    text-decoration: underline;
+    */
+}
+
+#tz-projects {
+    position: relative;
+    width: 98%;
+    margin: 0.4em auto;
+    max-width: 1700px;
+
+
+}
+
+#temp-trial {
+    -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1.5s; /* Firefox < 16 */
+    -ms-animation: fadein 1.5s; /* Internet Explorer */
+    -o-animation: fadein 1.5s; /* Opera < 12.1 */
+    animation: fadein 1.5s;
+}
+
+#tz-project {
+    position: relative;
+    width: 98%;
+    margin: 0.4em auto;
+    max-width: 1200px;
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    40% {opacity: 0}
+    100%   { opacity: 1; }
+}
+
+/*
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+*/
+
+.tz-project {
+    display: block;
+    position: relative;
+    float: left;
+    width: 32%;
+    margin: .6%;
+    vertical-align: top;
+    border: 1px solid #fff;
+    overflow: hidden;
+    cursor: pointer;
+    /*background-color: #f5f5f5;*/
+}
+
+.tz-project-image-wrapper {
+    width: 100%;
+    margin: 0;
+    padding-top: 62.0%;
+    /*
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    */
+    display: block;
+}
+
+.tz-project-image {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+	transition: all 0.15s ease-out 0s;
+}
+
+/*
+.tz-project-image.hover {
+    transform: scale(1.01,1.01);
+    opcacity: 0.6;
+}
+*/
+
+.tz-description-wrapper {
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(24,40,47, 0.0);*/
+    opacity: 0.0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+	/*transition: all 0.12s ease-out 0s;*/
+	transition: all 0.15s linear 0s;
+
+    display: flex;
+    align-items: center;
+    padding: 0 5% 0 5%;
+
+}
+
+.tz-description-wrapper:hover {
+    /*background-color: rgba(24,40,47, 0.9);*/
+    opacity: 1.0;
+}
+
+.tz-description h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    /*font-family: 'Lato', sans-serif;*/
+    font-size: 2.5em;
+    line-height: 1.2em;
+    /*text-transform: uppercase;*/
+    color: #fff;
+    padding: 2px 0 0px 0;
+}
+
+.tz-description p {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25em;
+    line-height: 1.2em;
+    font-weight: 300;
+    color: #fff;
+}
+
+.tz-description {
+	transition: all 0.10s ease-out 0s;
+    opacity: 0.0;
+}
+
+.tz-description.hover {
+    opacity: 1.0;
+}
+
+.tz-info-wrapper {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 4;
+    background-color: rgba(0,0,0,0.4);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+	transition: all 0.15s ease-out 0s;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: center center;
+    background-image: url("../images/info.png");
+    /*background-image: url("../images/touch_icons.png");*/
+}
+
+.tz-info-wrapper.active {
+    background-image: url("../images/close.png");
+    /*background-position: right center;*/
+}
+
+.tz-project-wrapper {
+    padding: 0 0 5% 0;
+}
+
+.tz-project-wrapper p {
+    max-width: 800px;
+    width: 80%;
+    padding: 1%;
+    color: #000;
+    margin: 0 auto;
+    text-align: center;
+
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    font-weight: 300;
+
+}
+
+#tz-secondary-header {
+    margin: 110px auto 20px auto;
+    max-width: 1000px;
+    width: 96%;
+    clear: both;
+}
+
+#tz-bread-crumb {
+    float: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    background-color: rgba(239,239,239,0.9);
+    border-top: 1px solid #b9b9b9;
+    border-bottom: 1px solid #b9b9b9;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+#tz-logo {
+    float: left;
+    padding: 0 0 0 14px;
+}
+
+#tz-logo img {
+	/*transition: opacity 0.6s ease-out 0s, transform 0.6s ease-out 0s;*/
+	transition: transform 0.4s ease-out 0s;
+    transform: translate(-1px, 1px) rotate(-30deg);
+    /*transform: rotate(-30deg);*/
+    opacity: 1.0;
+    /*transform: rotate(-30deg);*/
+    transform-origin: center center;
+}
+
+#tz-logo img.animateIn {
+    transform: translate(0px) rotate(0deg);
+    /*transform: rotate(0deg);*/
+    opacity: 1.0;
+}
+
+#tz-bread-crumb p {
+    float: left;
+    padding: 0 0 0 10px;
+    color: #000;
+	/*transition: transform 0.6s ease-out 0s;
+    transform: translate(-10px);*/
+}
+
+/*
+#tz-bread-crumb p.animateIn {
+    transform: translate(0px);
+}
+*/
+
+.tz-lazy{
+    opacity: 0;
+	transition: opacity 0.8s ease-out 0s, transform 0.6s ease-out 0s;
+    -webkit-transform: translate(0px, 20px);
+    /*transform: translate(0px, 0px);
+    opacity: 1.0;*/
+    transform: translate(0px, 40px);
+    opacity: 0.0;
+}
+
+/*
+.tz-lazy.hidden {
+    opacity: 0.0;
+    transform: translate(0px, 40px);
+    transition: none !important;
+}
+*/
+
+.tz-lazy.display {
+    opacity: 1.0;
+    transform: translate(0px, 0px);
+}
+
+.tz-project-screen {
+    width: 96%;
+    max-width: 1000px;
+    margin: 1% auto 0 auto;
+    position: relative;
+    /*overflow: hidden;*/
+    background-color: #fff;
+}
+
+.tz-project-screen img {
+    width: 100%;
+    border: 1px solid #ccc;
+    border: 1px solid #c6c6c6;
+
+}
+
+.tz-project-screen video {
+    width: 100%;
+    background-color: #fff !important;
+    border: 1px solid #ccc
+}
+
+.tz-project-screen-wrapper {
+    padding-top: 62%;
+}
+
+.tz-project-screen-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+}

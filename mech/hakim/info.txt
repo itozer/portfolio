@@ -1,0 +1,3 @@
+I based the index page design off of a web designers site: www.hakim.se
+
+Hakim El Hattab's work is dope. He does some very interesting front end work

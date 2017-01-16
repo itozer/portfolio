@@ -9,5 +9,43 @@
         $page = "CresAdmin";
         include("include/secondary_navigation.php");
     ?>
+    
+    <section id="tz-secondary-header">
+        <h3>CresAdmin</h3>
+        <p>
+            Crescendo Admin software allows your organization to easily organize and simplify administration of charitable gift annuities. The software's tracking system produces checks to annuitants, year-end 1099Rs, detailed reports and much more.
+            For more information, <a href="http://crescendointeractive.com/software/crescendo-admin.html" target="_blank">click here</a>.
+        </p>
+    </section>
+
+    <section id="tz-project-cresadmin" class="tz-project-wrapper">
+
+        <div class="tz-project-screen">
+            <div class="tz-project-screen-wrapper">
+                <!--<img data-src="images/projects/cresprint/cresprint_1.png" class="tz-lazy hidden" alt="cresprint1">-->
+                <img data-src="images/projects/cresadmin/cresadmin_1.png" class="tz-lazy" width="1100px" height="800px" alt="cresadmin1">
+            </div>
+        </div>
+
+        <p>GiftMail is a module in the CresAdmin software that allows you to create marketing letters to potential donors using your existing donor contacts.</p>
+
+
+        <div class="tz-project-screen">
+            <div class="tz-project-screen-wrapper">
+                <img data-src="images/projects/cresadmin/cresadmin_2.png" class="tz-lazy" width="1100px" height="800px" alt="cresadmin2">
+            </div>
+        </div>
+
+        <p>Arguable the most used feature in the CresAdmin software is the ability to generate and submit end of year 1099s to both clients and the IRS.</p>
+
+        <div class="tz-project-screen">
+            <div class="tz-project-screen-wrapper">
+                <img data-src="images/projects/cresadmin/cresadmin_3.png" class="tz-lazy" width="1100px" height="800px" alt="cresadmin3">
+            </div>
+        </div>
+
+    </section>
+
+
 </body>
 </html>

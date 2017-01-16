@@ -14,7 +14,7 @@
         var url = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=1000&title=false&byline=false&portrait=false';
         // This function puts the video on the page
         function embedVideo(video) {
-            document.getElementById('embed').innerHTML = unescape(video.html);
+            document.getElementById('tz-project-video-wrapper').innerHTML = unescape(video.html);
         }
         // This function loads the data from Vimeo
         function init() {
@@ -52,17 +52,8 @@
 
         <p>Watch the short video below for a demonstration of the CresPrint software in action.</p>
 
-        <!--
         <div class="tz-project-screen">
-            <video width="1100" controls>
-                <source src="images/projects/cresprint/cresprint_vid.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        -->
-
-        <div class="tz-project-screen">
-            <div id="embed">Loading video...</div>
+            <div id="tz-project-video-wrapper">Loading video...</div>
         </div>
 
         <p>The screens below demonstrate text and image editing on a brief and brochure in the CresPrint Editor.</p>

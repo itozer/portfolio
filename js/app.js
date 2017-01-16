@@ -3,10 +3,7 @@
 
     var cursorDirection = {};
 
-    //initLazyLoad(".tz-project-wrapper img[data-src]");
     initLazyLoad("img[data-src]");
-    //initLogoRoll();
-
     function ready(fn) {
         if (document.readyState !== "loading") {
             fn();
@@ -16,6 +13,8 @@
     }
 
     ready(function() {
+        var dhElements, i;
+
         initNavigationAnimation();
 /************* temp *////////
         /*
@@ -37,7 +36,6 @@
              return el.getAttribute("data-src")
          }));
 
-        var dhElements, i;
 
         dhElements = document.querySelectorAll(".tz-project");
         if (isTouchDevice()) {
@@ -75,7 +73,6 @@
     function isTouchDevice() {
         return ('ontouchstart' in window ||          // works on most browsers
         navigator.maxTouchPoints);                  // works on IE10/11 and Surface
-        //&& ((window.innerWidth || document.body.clientWidth) <= 768);
     };
 
     function setInfoButton(el) {
@@ -94,6 +91,7 @@
             var that = this;
             e.preventDefault();
             e.stopPropagation();
+
             //i may want to unselect the others...
             //var active = document.querySelectorAll(".tz-info-wrapper.active");
 
@@ -192,8 +190,7 @@
         prevDirection = 0,
         prevY = 0,
         topLine = document.getElementById("tz-header-top-line");
-console.log(logo);
-console.log(topLine);
+
         if (logo && topLine) {
 
             window.addEventListener("scroll", function(e) {
@@ -221,6 +218,7 @@ console.log(topLine);
         }
     }
 
+/*
     function initLogoRoll() {
         window.addEventListener("load", logoRoll);
 
@@ -232,7 +230,9 @@ console.log(topLine);
             window.removeEventListener("load", logoRoll);
         }
     }
+*/
 
+/*
     function initAnimateIn(query) {
         window.addEventListener("load", animateIn);
         window.addEventListener("resize", animateIn);
@@ -255,6 +255,7 @@ console.log(topLine);
             }
         }
     }
+*/
 
     function isInViewport(el) {
         var rect = el.getBoundingClientRect();

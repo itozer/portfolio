@@ -15,6 +15,7 @@
     ready(function() {
         var dhElements, i;
 
+        initContactAnimation();
         initNavigationAnimation();
 /************* temp *////////
         /*
@@ -184,6 +185,39 @@
             }
         }
     }
+
+    function initContactAnimation() {
+        var contactButton = document.getElementById("tz-contact-me"),
+        contactContainer = document.getElementById("tz-contact"),
+        helloContainer = document.getElementById("tz-header"),
+        cancelButton = document.getElementById("tz-cancel-contact");
+
+        if (helloContainer && contactButton) {
+            contactButton.addEventListener("click", toggleContact);
+            cancelButton.addEventListener("click", toggleContact);
+        }
+
+        function toggleContact() {
+            var width = window.innerWidth || document.documentElement.clientWidth;
+            if (helloContainer.classList.contains("hide")) {
+                //show welcome text. hide contact form
+                contactContainer.classList.add("hide");
+                //translateCoords(contactContainer, -width, 0);
+
+                helloContainer.classList.remove("hide");
+                //translateCoords(helloContainer, 0, 0);
+            } else {
+                //show contact form. hide welcome text.
+                helloContainer.classList.add("hide");
+                //translateCoords(helloContainer, width, 0);
+
+                contactContainer.classList.remove("hide");
+                //translateCoords(contactContainer, 0, 0);
+
+            }
+        }
+    }
+
 
     function initNavigationAnimation() {
         var logo = document.querySelector("#tz-logo img"),

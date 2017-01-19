@@ -6,13 +6,27 @@
 <body>
 
     <div id="tz-header-top-line"></div>
-    <section id="tz-header">
-        <div id="tz-header-text-wrapper">
-            <h1>Hi!</h1>
-            <h2>My name is <span id="tz-about-me" class="tz-inline tz-highlight">Isaac Tozer</span>. I'm a full stack web developer and interface designer. I like to make things people interact with. Take a look at some of my recent projects. <span id="tz-contact-me" class="tz-inline tz-highlight">Contact</span> me.</h2>
-        </div>
-    </section>
 
+    <div id="tz-header-wrapper">
+        <section id="tz-header">
+            <div class="spacer"></div>
+            <div id="tz-header-text-wrapper">
+                <h1>Hi!</h1>
+                <h2>My name is <span id="tz-about-me" class="tz-inline tz-highlight">Isaac Tozer</span>. I'm a full stack web developer and interface designer. I like to make things people interact with. Take a look at some of my recent projects. <span id="tz-contact-me" class="tz-inline tz-highlight">Contact</span> me.</h2>
+            </div>
+            <div class="spacer"></div>
+        </section>
+<!--
+        <section id="tz-contact">
+            <div id="tz-header-contact-wrapper" class="hide">
+                <input type="text" name="name">
+                <input type="text" name="email">
+                <input type="text" name="message">
+                <div id="tz-cancel-contact" style="width: 50px; height: 50px; background-color: #000;"></div>
+            </div>
+        </section>
+-->
+    </div>
 
     <section id="tz-projects">
 

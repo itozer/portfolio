@@ -93,10 +93,26 @@ p {
     max-width: 1700px;
 }
 
-#tz-header {
+#tz-header-wrapper {
     height: 350px;
+    position: relative;
+}
+
+#tz-header {
+    /*height: 350px;*/
+    height: 100%;
+    width: 100%;
+    flex: 8;
     display: flex;
     align-items: center;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.spacer {
+    flex: 1;
 }
 
 #tz-header-top-line {
@@ -143,11 +159,21 @@ p {
 }
 */
 
-#tz-header-text-wrapper {
+#tz-header-text-wrapper, #tz-header-contact-wrapper {
     margin: auto;
     width: 80%;
     padding: 0 0.8%;
     max-width: 1360px;
+    flex: 3;
+    overflow: hidden;
+	/*transition: opacity 0.6s ease-out 0s, transform 0.6s ease-out 0s;*/
+	transition: all 0.6s ease-out 0s;
+}
+
+#tz-header-text-wrapper.hide, #tz-header-contact-wrapper.hide {
+    opacity: 1.0;
+    flex: 1;
+    /*display: none;*/
 }
 
 .tz-highlight {

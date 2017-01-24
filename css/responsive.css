@@ -70,6 +70,23 @@
           width: 100%;
           margin: 1% 0;
       }
+
+      .tz-contact-group {
+          width: 100%;
+      }
+
+      #tz-contact input {
+          height: 40px;
+          font-size: 20px;
+          line-height: 40px;
+          margin-bottom: 10px;
+      }
+
+      #tz-contact textarea {
+          height: 90px;
+      }
+
+
   }
 
   /* Custom, iPhone Retina */

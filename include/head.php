@@ -4,5 +4,5 @@
     <script src="js/app.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans:300,400,600" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans:300,400,600" rel="stylesheet">-->
     <link rel="shortcut icon" href="images/favicon.ico" />

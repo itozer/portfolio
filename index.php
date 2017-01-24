@@ -9,23 +9,35 @@
 
     <div id="tz-header-wrapper">
         <section id="tz-header">
-            <div class="spacer"></div>
+            <div class="tz-spacer"></div>
             <div id="tz-header-text-wrapper">
                 <h1>Hi!</h1>
                 <h2>My name is <span id="tz-about-me" class="tz-inline tz-highlight">Isaac Tozer</span>. I'm a full stack web developer and interface designer. I like to make things people interact with. Take a look at some of my recent projects. <span id="tz-contact-me" class="tz-inline tz-highlight">Contact</span> me.</h2>
             </div>
-            <div class="spacer"></div>
+            <div class="tz-spacer"></div>
         </section>
-<!--
-        <section id="tz-contact">
-            <div id="tz-header-contact-wrapper" class="hide">
-                <input type="text" name="name">
-                <input type="text" name="email">
-                <input type="text" name="message">
-                <div id="tz-cancel-contact" style="width: 50px; height: 50px; background-color: #000;"></div>
+
+        <section id="tz-contact" style="left: -9999px;">
+            <div class="tz-spacer"></div>
+            <div id="tz-header-contact-wrapper">
+                <div id="tz-contact-group-1" class="tz-contact-group">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="email" placeholder="Email">
+                </div>
+                <div id="tz-contact-group-2" class="tz-contact-group">
+                    <textarea name="message" placeholder="Message"></textarea>
+                </div>
+                <div id="tz-contact-actions" class="tz-clear">
+                    <div id="tz-cancel-contact" class="tz-contact-button">
+                        <div class="tz-contact-button-image"></div><p>Cancel</p>
+                    </div>
+                    <div id="tz-send-contact" class="tz-contact-button">
+                        <div class="tz-contact-button-image"></div><p>Send</p>
+                    </div>
+                </div>
             </div>
+            <div class="tz-spacer"></div>
         </section>
--->
     </div>
 
     <section id="tz-projects">

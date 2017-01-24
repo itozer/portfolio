@@ -49,7 +49,7 @@ h2 {
     font-family: 'Open Sans', sans-serif;
     /*font-size: 2.8em;*/
     font-size: 2.3em;
-    line-height: 1.2em;
+    line-height: 1.25em;
     font-weight: 300;
     color: #000;
 
@@ -96,22 +96,28 @@ p {
 #tz-header-wrapper {
     height: 350px;
     position: relative;
+    overflow: hidden;
 }
 
-#tz-header {
+#tz-header, #tz-contact {
     /*height: 350px;*/
     height: 100%;
     width: 100%;
-    flex: 8;
     display: flex;
     align-items: center;
-    overflow: hidden;
     position: absolute;
+	transition: all 0.30s ease-out 0s;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 
-.spacer {
+#tz-header.hide, #tz-contact.hide {
+    opacity: 0.0;
+    z-index: 1;
+}
+
+.tz-spacer {
     flex: 1;
 }
 
@@ -161,19 +167,17 @@ p {
 
 #tz-header-text-wrapper, #tz-header-contact-wrapper {
     margin: auto;
-    width: 80%;
+    /*width: 80%;*/
     padding: 0 0.8%;
     max-width: 1360px;
-    flex: 3;
+    flex: 8;
     overflow: hidden;
 	/*transition: opacity 0.6s ease-out 0s, transform 0.6s ease-out 0s;*/
 	transition: all 0.6s ease-out 0s;
 }
 
-#tz-header-text-wrapper.hide, #tz-header-contact-wrapper.hide {
-    opacity: 1.0;
-    flex: 1;
-    /*display: none;*/
+#tz-header-contact-wrapper {
+    max-width: 1000px;
 }
 
 .tz-highlight {
@@ -488,4 +492,121 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+#tz-contact-group-1 {
+    float: left;
+}
+
+#tz-contact-group-2 {
+    float: right;
+}
+
+.tz-contact-group {
+    width: 48%;
+}
+
+#tz-contact-actions:before {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+#tz-contact input {
+    width: 100%;
+    height: 70px;
+    float: left;
+    border: 1px solid #c6c6c6;
+    border-style: solid;
+    -webkit-appearance: none;
+    box-shadow: none;
+    border-radius: 0px;
+    margin-bottom: 15px;
+    line-height: 70px;
+    font-size: 30px;
+    padding: 10px;
+    background-color: #efefef;
+}
+
+#tz-contact textarea {
+    width: 100%;
+    height: 150px;
+    float: right;
+    border: 1px solid #c6c6c6;
+    border-style: solid;
+    -webkit-appearance: none;
+    box-shadow: none;
+    border-radius: 0px;
+    padding: 10px;
+    background-color: #efefef;
+}
+
+#tz-cancel-contact {
+    float: left;
+}
+
+#tz-send-contact {
+    float: right;
+}
+
+.tz-contact-button {
+  cursor: pointer;
+}
+
+.tz-contact-button p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 46px;
+  margin-left: 4px;
+}
+
+.tz-contact-button .tz-contact-button-image {
+    width: 46px;
+    height: 46px;
+    background-repeat: no-repeat;
+    background-image: url(../images/contact_buttons.png);
+}
+
+.tz-contact-button > div, .tz-contact-button > p {
+    float: left;
+}
+
+#tz-send-contact .tz-contact-button-image {
+    background-position: top right;
+}
+
+#tz-cancel-contact .tz-contact-button-image {
+    background-position: top left;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000;
+  opacity: 0.7;
+  font-size: 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #000;
+  opacity: 0.7;
+  font-size: 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #000;
+  opacity: 0.7;
+  font-size: 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #000;
+  opacity: 0.7;
+  font-size: 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }

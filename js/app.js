@@ -202,18 +202,17 @@
             if (helloContainer.classList.contains("hide")) {
                 //show welcome text. hide contact form
                 contactContainer.classList.add("hide");
-                //translateCoords(contactContainer, -width, 0);
+                setPosition(contactContainer, -width, 0);
 
                 helloContainer.classList.remove("hide");
-                //translateCoords(helloContainer, 0, 0);
+                setPosition(helloContainer, 0, 0);
             } else {
                 //show contact form. hide welcome text.
                 helloContainer.classList.add("hide");
-                //translateCoords(helloContainer, width, 0);
+                setPosition(helloContainer, width, 0);
 
                 contactContainer.classList.remove("hide");
-                //translateCoords(contactContainer, 0, 0);
-
+                setPosition(contactContainer, 0, 0);
             }
         }
     }
@@ -252,67 +251,8 @@
         }
     }
 
-/*
-    function initLogoRoll() {
-        window.addEventListener("load", logoRoll);
-
-        function logoRoll() {
-            var logo = document.querySelector("#tz-logo img");
-            //var breadcrumb = document.querySelector("#tz-bread-crumb p");
-            logo.classList.add("animateIn");
-            //breadcrumb.classList.add("animateIn");
-            window.removeEventListener("load", logoRoll);
-        }
-    }
-*/
-
-/*
-    function initAnimateIn(query) {
-        window.addEventListener("load", animateIn);
-        window.addEventListener("resize", animateIn);
-        window.addEventListener("scroll", animateIn);
-
-        function animateIn() {
-            var img, imgs = document.querySelectorAll(query);
-            [].forEach.call(imgs, function(img) {
-                if (isInViewport(img, 50)) {
-                    //console.log("animate in: ");
-                    img.classList.remove("hidden");
-                    img.classList.add("display");
-                }
-            });
-            // if all the images are loaded, stop calling the handler
-            if (imgs.length === 0) {
-                window.removeEventListener("load", animateIn);
-                window.removeEventListener("resize", animateIn);
-                window.removeEventListener("scroll", animateIn);
-            }
-        }
-    }
-*/
-
     function isInViewport(el) {
         var rect = el.getBoundingClientRect();
-
-/*
-console.log(el);
-console.log("top: " + rect.top + " left: " + rect.left + " bottom: " + rect.bottom + " right: " + rect.right);
-console.log("windowHeight: " + window.innerHeight);
-console.log("windowWidth: " + window.innerWidth);
-console.log("width: " + rect.width);
-console.log("height: " + rect.height);
-*/
-
-    /*
-        return (
-            rect.left >= 0 &&
-            //rect.top >= 0 &&
-            //rect.bottom + offset <= (window.innerHeight || document.documentElement.clientHeight) &&
-            ((rect.top >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight)) ||
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-        */
 
         return (
             (rect.bottom >=0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) ||
@@ -320,9 +260,13 @@ console.log("height: " + rect.height);
     }
 
     function translateCoords(el, x, y) {
-//console.log("translateCoords -- x: " + x + " y: " + y);
         el.style.webkitTransform = "translate(" + x + "px," + y + "px)", el.style.msProperty = "translate(" + x + "px," + y + "px)", el.style.transform = "translate(" + x + "px," + y + "px)";
     };
+
+    function setPosition(el, left, top) {
+        el.style.left = left + "px";
+        el.style.top = top + "px";
+    }
 
     function scale(el, x, y) {
         el.style.webkitTransform = "scale(" + x + "," + y + ")", el.style.msProperty = "scale(" + x + "," + y + ")", el.style.transform = "scale(" + x + "," + y + ")";
@@ -330,10 +274,8 @@ console.log("height: " + rect.height);
 
     function setGradient(el, deg, rgba1, rgba2, rgba3) {
         if (rgba3 === undefined) {
-            //el.setAttribute("style", "background: linear-gradient("+deg+"deg,"+rgba1+","+rgba2+")");
             el.style.background = "linear-gradient("+deg+"deg,"+rgba1+","+rgba2+")";
         } else {
-            //el.setAttribute("style", "background: linear-gradient("+deg+"deg,"+rgba1+","+rgba2+","+rgba3+")");
             el.style.background = "linear-gradient("+deg+"deg,"+rgba1+","+rgba2+","+rgba3+")";
         }
     }
@@ -342,8 +284,6 @@ console.log("height: " + rect.height);
         var i, img;
 
         for (i = 0; i < imgSrcs.length; i++) {
-//console.log(imgSrcs[i]);
-//console.log("what");
             img = new Image();
             img.src = imgSrcs[i];
         }

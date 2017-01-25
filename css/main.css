@@ -506,10 +506,19 @@ p {
     width: 48%;
 }
 
+/*
+#tz-contact-actions {
+    height: 46px;
+    width: 100%;
+}
+*/
+
 #tz-contact-actions:before {
+    /*
     content: " ";
     display: table;
     clear: both;
+    */
 }
 
 #tz-contact input {
@@ -521,16 +530,20 @@ p {
     -webkit-appearance: none;
     box-shadow: none;
     border-radius: 0px;
-    margin-bottom: 15px;
     line-height: 70px;
     font-size: 30px;
     padding: 10px;
     background-color: #efefef;
 }
 
+#tz-contact input[name=name] {
+    margin-bottom: 15px;
+}
+
+
 #tz-contact textarea {
     width: 100%;
-    height: 150px;
+    height: 154px;
     float: right;
     border: 1px solid #c6c6c6;
     border-style: solid;
@@ -547,10 +560,12 @@ p {
 
 #tz-send-contact {
     float: right;
+
 }
 
 .tz-contact-button {
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .tz-contact-button p {
@@ -560,7 +575,7 @@ p {
   text-transform: uppercase;
   font-size: 24px;
   line-height: 46px;
-  margin-left: 4px;
+  margin-left: 8px;
 }
 
 .tz-contact-button .tz-contact-button-image {
@@ -568,18 +583,44 @@ p {
     height: 46px;
     background-repeat: no-repeat;
     background-image: url(../images/contact_buttons.png);
+    border-radius: 50%;
 }
 
-.tz-contact-button > div, .tz-contact-button > p {
+.tz-contact-button div, .tz-contact-button p {
     float: left;
+    /*display: inline-block;*/
+}
+
+.tz-contact-button-image, .tz-contact-button p {
+	/*transition: all 0.15s ease-out 0s;*/
+	transition: background-color 0.30s ease-out 0s, transform 0.30s ease-out 0s;*/
+}
+
+#tz-contact .tz-contact-button:hover .tz-contact-button-image {
+    transform: rotate(8deg);
+    /*
+    background-color: #ff530d;
+    background-color: #3f5765;
+    background-color: #bdd4de;
+    */
+}
+
+.tz-contact-button:hover p {
+    color: #ff530d;
 }
 
 #tz-send-contact .tz-contact-button-image {
     background-position: top right;
+    background-color: #000;
 }
 
 #tz-cancel-contact .tz-contact-button-image {
     background-position: top left;
+    background-color: #efefef;
+}
+
+#tz-cancel-contact:hover .tz-contact-button-image {
+    /*background-position: bottom left;*/
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

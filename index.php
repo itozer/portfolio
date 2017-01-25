@@ -27,14 +27,16 @@
                 <div id="tz-contact-group-2" class="tz-contact-group">
                     <textarea name="message" placeholder="Message"></textarea>
                 </div>
-                <div id="tz-contact-actions" class="tz-clear">
-                    <div id="tz-cancel-contact" class="tz-contact-button">
-                        <div class="tz-contact-button-image"></div><p>Cancel</p>
-                    </div>
+                <div style="clear: both;"></div>
+                <div id="tz-contact-actions">
                     <div id="tz-send-contact" class="tz-contact-button">
                         <div class="tz-contact-button-image"></div><p>Send</p>
                     </div>
+                    <div id="tz-cancel-contact" class="tz-contact-button">
+                        <div class="tz-contact-button-image"></div><p>Cancel</p>
+                    </div>
                 </div>
+                <div style="clear: both;"></div>
             </div>
             <div class="tz-spacer"></div>
         </section>

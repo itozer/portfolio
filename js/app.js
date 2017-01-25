@@ -13,7 +13,7 @@
     }
 
     ready(function() {
-        var dhElements, i;
+        var dhButtons, dhElements, i;
 
         initContactAnimation();
         initNavigationAnimation();
@@ -39,6 +39,7 @@
 
 
         dhElements = document.querySelectorAll(".tz-project");
+        dhButtons = document.querySelectorAll(".tz-directional-button");
         if (isTouchDevice()) {
         //if (true) {
             for (i = 0; i < dhElements.length; i++) {
@@ -47,6 +48,9 @@
         } else {
             for (i = 0; i < dhElements.length; i++) {
                 setDirectionalHover(dhElements[i]);
+            }
+            for (i = 0; i < dhButtons.length; i++) {
+                setDirectionalHoverButton(dhButtons[i]);
             }
         }
 
@@ -131,8 +135,6 @@
             translateCoords(text, cursorDirection.directionX * -30, cursorDirection.directionY * -30);
 
             setGradient(bg, cursorDirection.degree, "rgba(0,23,38,0.9)", "rgba(0,23,38,0.9)", "rgba(0,23,38,0.8)");
-            //setGradient(document.getElementById("header-top-line"), cursorDirection.degree, "rgba(0,23,38,0.9)", "rgba(0,23,38,0.9)", "rgba(0,23,38,0.8)");
-            //setGradient(document.getElementById("header-fat-line"), cursorDirection.degree, "rgba(239,239,239,1.0)", "rgba(239,239,239,1.0)", "rgba(239,239,239,0.3)");
 
             setTimeout(function() {
                 text.classList.add("hover");
@@ -147,8 +149,27 @@
                 text.classList.remove("hover");
             }, 50);
             translateCoords(text, cursorDirection.directionX * 30, cursorDirection.directionY * 30);
-            //setGradient(document.getElementById("header-top-line"), cursorDirection.degree, "rgba(0,23,38,0.9)", "rgba(0,23,38,0.9)", "rgba(0,23,38,0.9)");
-            //setGradient(document.getElementById("header-fat-line"), cursorDirection.degree, "rgba(239,239,239,1.0)", "rgba(239,239,239,1.0)", "rgba(239,239,239,1.0)");
+        });
+    }
+
+    function setDirectionalHoverButton(el) {
+        el.addEventListener("mouseenter", function(e) {
+            var overlay = el.querySelector(".tz-directional-button-overlay");
+            overlay.classList.add("no-transition");
+            translateCoords(overlay, cursorDirection.directionX * -30, cursorDirection.directionY * -30);
+
+            setTimeout(function() {
+                overlay.classList.add("hover");
+                overlay.classList.remove("no-transition");
+                translateCoords(overlay, 0, 0);
+            }, 50);
+        }),
+        el.addEventListener("mouseleave", function(e) {
+            var overlay = this.querySelector(".tz-directional-button-overlay");
+            setTimeout(function() {
+                overlay.classList.remove("hover");
+            }, 50);
+            translateCoords(overlay, cursorDirection.directionX * 30, cursorDirection.directionY * 30);
         });
     }
 

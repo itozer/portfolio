@@ -5,6 +5,18 @@
 </head>
 <body>
 
+
+
+    <div class="tz-directional-button">
+        <div class="tz-directional-button-wrapper">
+            <div class="tz-contact-button-image"></div><p>Cancel</p>
+        </div>
+        <div class="tz-directional-button-overlay-wrapper">
+            <div class="tz-directional-button-overlay"></div>
+        </div>
+    </div>
+
+
     <div id="tz-header-top-line"></div>
 
     <div id="tz-header-wrapper">
@@ -29,12 +41,19 @@
                 </div>
                 <div style="clear: both;"></div>
                 <div id="tz-contact-actions">
-                    <div id="tz-send-contact" class="tz-contact-button">
+                    <div id="tz-send-contact" class="tz-contact-button tz-directional-button">
                         <div class="tz-contact-button-image"></div><p>Send</p>
+                        <div class="tz-directional-button-overlay"></div>
                     </div>
-                    <div id="tz-cancel-contact" class="tz-contact-button">
+                    <div id="tz-cancel-contact" class="tz-contact-button tz-directional-button">
                         <div class="tz-contact-button-image"></div><p>Cancel</p>
+                        <div class="tz-directional-button-overlay"></div>
                     </div>
+
+
+
+
+
                 </div>
                 <div style="clear: both;"></div>
             </div>

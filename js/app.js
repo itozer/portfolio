@@ -39,7 +39,7 @@
 
 
         dhElements = document.querySelectorAll(".tz-project");
-        dhButtons = document.querySelectorAll(".tz-directional-button");
+        //dhButtons = document.querySelectorAll(".tz-contact-button");
         if (isTouchDevice()) {
         //if (true) {
             for (i = 0; i < dhElements.length; i++) {
@@ -49,9 +49,11 @@
             for (i = 0; i < dhElements.length; i++) {
                 setDirectionalHover(dhElements[i]);
             }
+            /*
             for (i = 0; i < dhButtons.length; i++) {
                 setDirectionalHoverButton(dhButtons[i]);
             }
+            */
         }
 
         //track cursor movement
@@ -152,24 +154,36 @@
         });
     }
 
+
     function setDirectionalHoverButton(el) {
         el.addEventListener("mouseenter", function(e) {
-            var overlay = el.querySelector(".tz-directional-button-overlay");
-            overlay.classList.add("no-transition");
-            translateCoords(overlay, cursorDirection.directionX * -30, cursorDirection.directionY * -30);
+            var fg = this.querySelector(".tz-dh-fg");
+            var fgWrapper = this.querySelector(".tz-dh-fg-wrapper");
+            var bg = this.querySelector(".tz-dh-bg");
+//console.log("mouseenter");
+            fg.classList.add("no-transition");
+            //translateCoords(fg, cursorDirection.directionX * -180, cursorDirection.directionY * -50);
+            translateCoords(fg, cursorDirection.directionX * -80, cursorDirection.directionY * -20);
+
+            //setGradient(fgWrapper, cursorDirection.degree, "rgba(0,23,38,0.9)", "rgba(0,23,38,0.9)", "rgba(0,23,38,0.8)");
 
             setTimeout(function() {
-                overlay.classList.add("hover");
-                overlay.classList.remove("no-transition");
-                translateCoords(overlay, 0, 0);
+                fg.classList.add("hover");
+                bg.classList.add("hover");
+                fg.classList.remove("no-transition");
+                translateCoords(fg, 0, 0);
             }, 50);
         }),
         el.addEventListener("mouseleave", function(e) {
-            var overlay = this.querySelector(".tz-directional-button-overlay");
+            var fg = this.querySelector(".tz-dh-fg");
+            var bg = this.querySelector(".tz-dh-bg");
+//console.log("mouseleave");
             setTimeout(function() {
-                overlay.classList.remove("hover");
+                fg.classList.remove("hover");
+                bg.classList.remove("hover");
             }, 50);
-            translateCoords(overlay, cursorDirection.directionX * 30, cursorDirection.directionY * 30);
+            //translateCoords(fg, cursorDirection.directionX * 180, cursorDirection.directionY * 50);
+            translateCoords(fg, cursorDirection.directionX * 80, cursorDirection.directionY * 20);
         });
     }
 
@@ -211,7 +225,7 @@
         var contactButton = document.getElementById("tz-contact-me"),
         contactContainer = document.getElementById("tz-contact"),
         helloContainer = document.getElementById("tz-header"),
-        cancelButton = document.getElementById("tz-cancel-contact");
+        cancelButton = document.getElementById("tz-contact-cancel");
 
         if (helloContainer && contactButton) {
             contactButton.addEventListener("click", toggleContact);
@@ -234,6 +248,13 @@
 
                 contactContainer.classList.remove("hide");
                 setPosition(contactContainer, 0, 0);
+
+
+                var dhButtons = document.querySelectorAll(".tz-contact-button"), i;
+                for (i = 0; i < dhButtons.length; i++) {
+                    setDirectionalHoverButton(dhButtons[i]);
+                }
+
             }
         }
     }

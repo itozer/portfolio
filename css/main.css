@@ -239,8 +239,9 @@ p {
 */
 
 .tz-project {
-    display: block;
+    /*display: block;
     position: relative;
+    */
     float: left;
     width: 32%;
     margin: .6%;
@@ -259,16 +260,18 @@ p {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     */
-    display: block;
+    /*display: block;*/
 }
 
 .tz-project-image {
     max-width: 100%;
     max-height: 100%;
+    /*
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
+    */
 	/*transition: all 0.15s ease-out 0s;*/
 }
 
@@ -282,14 +285,14 @@ p {
 .tz-description-wrapper {
     width: 100%;
     height: 100%;
-    /*background-color: rgba(24,40,47, 0.0);*/
+    /*
     opacity: 0.0;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 3;
-	/*transition: all 0.12s ease-out 0s;*/
 	transition: all 0.15s linear 0s;
+    */
 
     display: flex;
     align-items: center;
@@ -297,10 +300,11 @@ p {
 
 }
 
+/*
 .tz-description-wrapper:hover {
-    /*background-color: rgba(24,40,47, 0.9);*/
     opacity: 1.0;
 }
+*/
 
 .tz-description h3 {
     font-family: 'Open Sans', sans-serif;
@@ -321,6 +325,7 @@ p {
     color: #fff;
 }
 
+/*
 .tz-description {
 	transition: all 0.10s ease-out 0s;
     opacity: 0.0;
@@ -329,6 +334,7 @@ p {
 .tz-description.hover {
     opacity: 1.0;
 }
+*/
 
 .tz-info-wrapper {
     position: absolute;
@@ -506,12 +512,13 @@ p {
     width: 48%;
 }
 
-/*
 #tz-contact-actions {
+/*
     height: 46px;
     width: 100%;
-}
 */
+    margin-top: 15px;
+}
 
 #tz-contact-actions:before {
     /*
@@ -554,6 +561,7 @@ p {
     background-color: #efefef;
 }
 
+/*
 #tz-cancel-contact {
     float: left;
 }
@@ -588,21 +596,14 @@ p {
 
 .tz-contact-button div, .tz-contact-button p {
     float: left;
-    /*display: inline-block;*/
 }
 
 .tz-contact-button-image, .tz-contact-button p {
-	/*transition: all 0.15s ease-out 0s;*/
-	transition: background-color 0.30s ease-out 0s, transform 0.30s ease-out 0s;*/
+	transition: background-color 0.30s ease-out 0s, transform 0.30s ease-out 0s;
 }
 
 #tz-contact .tz-contact-button:hover .tz-contact-button-image {
     transform: rotate(8deg);
-    /*
-    background-color: #ff530d;
-    background-color: #3f5765;
-    background-color: #bdd4de;
-    */
 }
 
 .tz-contact-button:hover p {
@@ -620,8 +621,8 @@ p {
 }
 
 #tz-cancel-contact:hover .tz-contact-button-image {
-    /*background-position: bottom left;*/
 }
+*/
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #000;
@@ -652,46 +653,105 @@ p {
   font-weight: 300;
 }
 
-.tz-directional-button {
-    position: relative;
+.tz-clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.tz-contact-button {
+    display: block;
     cursor: pointer;
+    overflow: hidden;
+    /*padding: 10px;*/
 }
 
-.tz-directional-button-wrapper {
-    width: 300px;
-    height: 200px;
+#tz-contact-cancel {
+    /*
+    width: 162px;
+    height: 62px;
+    */
+    width: 142px;
+    height: 46px;
+    top: 0px;
+    left: 0px;
 }
 
-.tz-directional-button {
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
+#tz-contact-send{
+    /*
+    width: 162px;
+    height: 62px;
+    */
+    width: 142px;
+    height: 46px;
+    top: 0px;
+    right: 0px;
 }
 
-.tz-directional-button-overlay-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
+.tz-contact-button-wrapper, .tz-contact-button-overlay-wrapper, .tz-contact-button-overlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(30,30,30,0.6);
-    opacity: 0.0;
-    z-index: 3;
-	transition: all 0.15s linear 0s;
 }
 
-.tz-directional-button-overlay-wrapper:hover {
+.tz-contact-button-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.tz-contact-button-image-wrapper {
+    /*
+    width: 100%;
+    height: 100%;
+    */
+}
+
+.tz-contact-button-image-wrapper.tz-dh-bg {
+    z-index: 3;
+    background-color: rgba(0,0,0,0.0);
+    position: static;
+    transition: all 0.10s ease-out 0s;
+}
+
+.tz-contact-button-image-wrapper.tz-dh-bg.hover {
+    /*transform: scale(0.65,0.65);*/
+    transform: scale(0.90,0.90);
+}
+
+
+.tz-contact-button-image-wrapper div, .tz-contact-button-image-wrapper p {
+    float: left;
+}
+
+.tz-contact-button-image-wrapper p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 46px;
+    margin-left: 8px;
+}
+
+.tz-contact-button-image {
+    width: 46px;
+    height: 46px;
+    background-repeat: no-repeat;
+    background-image: url(../images/contact_buttons.png);
+    border-radius: 50%;
+}
+
+#tz-contact-cancel .tz-contact-button-image {
+    background-position: top left;
+    background-color: #efefef;
+}
+
+.tz-contact-button-overlay-wrapper.tz-dh-fg-wrapper {
+    z-index: 2;
     opacity: 1.0;
 }
 
-.tz-directional-button-overlay {
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
+.tz-contact-button-overlay {
+    background-color: #bdd4de;
+    background-color: #fff;
+    border: 1px solid #ccc;
 }

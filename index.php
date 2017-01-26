@@ -7,17 +7,27 @@
 
 
 
-    <div class="tz-directional-button">
-        <div class="tz-directional-button-wrapper">
-            <div class="tz-contact-button-image"></div><p>Cancel</p>
+
+
+
+<!--
+    <a class="tz-project tz-dh" href="cresprint.php">
+        <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
+            <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/813x504/cresprint.png" width="813px" height="504px">
         </div>
-        <div class="tz-directional-button-overlay-wrapper">
-            <div class="tz-directional-button-overlay"></div>
+        <div class="tz-description-wrapper tz-dh-fg-wrapper">
+            <div class="tz-description tz-dh-fg">
+                <h3>CresPrint</h3>
+                <p>A fully customizable web to print solution</p>
+            </div>
         </div>
-    </div>
+    </a>
+-->
 
 
     <div id="tz-header-top-line"></div>
+
+
 
     <div id="tz-header-wrapper">
         <section id="tz-header">
@@ -41,6 +51,32 @@
                 </div>
                 <div style="clear: both;"></div>
                 <div id="tz-contact-actions">
+
+                    <a id="tz-contact-cancel" class="tz-contact-button tz-dh">
+                        <div class="tz-contact-button-wrapper tz-dh-bg-wrapper">
+                            <div class="tz-contact-button-image-wrapper tz-dh-bg">
+                                <div class="tz-contact-button-image"></div>
+                                <p>Cancel</p>
+                            </div>
+                        </div>
+                        <div class="tz-contact-button-overlay-wrapper tz-dh-fg-wrapper">
+                            <div class="tz-contact-button-overlay tz-dh-fg"></div>
+                        </div>
+                    </a>
+
+                    <a id="tz-contact-send" class="tz-contact-button tz-dh">
+                        <div class="tz-contact-button-wrapper tz-dh-bg-wrapper">
+                            <div class="tz-contact-button-image-wrapper tz-dh-bg">
+                                <div class="tz-contact-button-image"></div>
+                                <p>Send</p>
+                            </div>
+                        </div>
+                        <div class="tz-contact-button-overlay-wrapper tz-dh-fg-wrapper">
+                            <div class="tz-contact-button-overlay tz-dh-fg"></div>
+                        </div>
+                    </a>
+
+                <!--
                     <div id="tz-send-contact" class="tz-contact-button tz-directional-button">
                         <div class="tz-contact-button-image"></div><p>Send</p>
                         <div class="tz-directional-button-overlay"></div>
@@ -49,10 +85,7 @@
                         <div class="tz-contact-button-image"></div><p>Cancel</p>
                         <div class="tz-directional-button-overlay"></div>
                     </div>
-
-
-
-
+                -->
 
                 </div>
                 <div style="clear: both;"></div>
@@ -63,9 +96,9 @@
 
     <section id="tz-projects">
 
+<!--
         <a class="tz-project" href="cresprint.php">
             <div class="tz-project-image-wrapper">
-                <!--<img class="tz-project-image" src="images/cresprint.png" width="813px" height="504px">-->
                 <img class="tz-project-image tz-lazy" data-src="images/project_thumbs/813x504/cresprint.png" width="813px" height="504px">
             </div>
             <div class="tz-description-wrapper">
@@ -75,39 +108,52 @@
                 </div>
             </div>
         </a>
+-->
 
-        <a class="tz-project" href="crespro.php">
-            <div class="tz-project-image-wrapper">
-                <!--<img class="tz-project-image" src="images/crespro.png" width="813px" height="504px">-->
-                <img class="tz-project-image tz-lazy" data-src="images/project_thumbs/813x504/crespro.png" width="813px" height="504px">
+        <a class="tz-project tz-dh" href="cresprint.php">
+            <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/813x504/cresprint.png" width="813px" height="504px">
             </div>
-            <div class="tz-description-wrapper">
-                <div class="tz-description">
+            <div class="tz-description-wrapper tz-dh-fg-wrapper">
+                <div class="tz-description tz-dh-fg">
+                    <h3>CresPrint</h3>
+                    <p>A fully customizable web to print solution</p>
+                </div>
+            </div>
+        </a>
+
+        <a class="tz-project tz-dh" href="crespro.php">
+            <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
+                <!--<img class="tz-project-image" src="images/crespro.png" width="813px" height="504px">-->
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/813x504/crespro.png" width="813px" height="504px">
+            </div>
+            <div class="tz-description-wrapper tz-dh-fg-wrapper">
+                <div class="tz-description tz-dh-fg">
                     <h3>CresPro</h3>
                     <p>The most comprehensive planned gifts marketing package available</p>
                 </div>
             </div>
         </a>
 
-        <a class="tz-project" href="cresadmin.php">
-            <div class="tz-project-image-wrapper">
-                <img class="tz-project-image tz-lazy" data-src="images/project_thumbs/813x504/cresadmin.png" width="813px" height="504px">
+        <a class="tz-project tz-dh" href="cresadmin.php">
+            <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/813x504/cresadmin.png" width="813px" height="504px">
             </div>
-            <div class="tz-description-wrapper">
-                <div class="tz-description">
+            <div class="tz-description-wrapper tz-dh-fg-wrapper">
+                <div class="tz-description tz-dh-fg">
                     <h3>CresAdmin</h3>
                     <p>Easily organize and simplify administration of charitable gift annuities</p>
                 </div>
             </div>
         </a>
 
-        <a class="tz-project" href="petdental.php">
-            <div class="tz-project-image-wrapper">
+        <a class="tz-project tz-dh" href="petdental.php">
+            <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
                 <!--<img class="tz-project-image" src="images/pet_dental.png" width="813px" height="504px">-->
-                <img class="tz-project-image tz-lazy" data-src="images/project_thumbs/813x504/pet_dental.png" width="813px" height="504px">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/813x504/pet_dental.png" width="813px" height="504px">
             </div>
-            <div class="tz-description-wrapper">
-                <div class="tz-description">
+            <div class="tz-description-wrapper tz-dh-fg-wrapper">
+                <div class="tz-description tz-dh-fg">
                     <h3>PetDental</h3>
                     <p>
                         PetDental is an iPhone app designed to help you improve the health of your dogs or cats teeth
@@ -117,33 +163,31 @@
             </div>
         </a>
 
-        <a class="tz-project" href="skydump.php">
-            <div class="tz-project-image-wrapper">
+        <a class="tz-project tz-dh" href="skydump.php">
+            <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
                 <!--<img class="tz-project-image" src="images/skydump.png" width="813px" height="504px">-->
-                <img class="tz-project-image tz-lazy" data-src="images/project_thumbs/813x504/skydump.png" width="813px" height="504px">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/813x504/skydump.png" width="813px" height="504px">
             </div>
-            <div class="tz-description-wrapper">
-                <div class="tz-description">
+            <div class="tz-description-wrapper tz-dh-fg-wrapper">
+                <div class="tz-description tz-dh-fg">
                     <h3>SkyDump</h3>
                     <p>Never wait in line for the bathroom again</p>
                 </div>
             </div>
         </a>
 
-
-        <a class="tz-project" href="grapestomp.php">
-            <div class="tz-project-image-wrapper">
+        <a class="tz-project tz-dh" href="grapestomp.php">
+            <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
                 <!--<img class="tz-project-image" src="images/grape_stomp.png" width="813px" height="504px">-->
-                <img class="tz-project-image tz-lazy" data-src="images/project_thumbs/813x504/grape_stomp.png" width="813px" height="504px">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/813x504/grape_stomp.png" width="813px" height="504px">
             </div>
-            <div class="tz-description-wrapper">
-                <div class="tz-description">
+            <div class="tz-description-wrapper tz-dh-fg-wrapper">
+                <div class="tz-description tz-dh-fg">
                     <h3>The Great Grape Stomp</h3>
                     <p>Custom wine making event and hosting</p>
                 </div>
             </div>
         </a>
-
 
     </section>
 

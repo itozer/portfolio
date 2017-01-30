@@ -482,6 +482,14 @@ p {
     padding-top: 62%;
 }
 
+#tz-skydump-wrapper.tz-project-screen-wrapper {
+    padding-top: 70%;
+}
+
+#tz-skydump-wrapper iframe {
+    border: none;
+}
+
 .tz-project-screen-wrapper img {
     position: absolute;
     top: 0;
@@ -663,6 +671,8 @@ p {
     display: block;
     cursor: pointer;
     overflow: hidden;
+    width: 118px;
+    height: 45px;
     /*padding: 10px;*/
 }
 
@@ -670,22 +680,24 @@ p {
     /*
     width: 162px;
     height: 62px;
-    */
     width: 142px;
     height: 46px;
+    */
     top: 0px;
     left: 0px;
+    float: left;
 }
 
 #tz-contact-send{
     /*
     width: 162px;
     height: 62px;
-    */
     width: 142px;
     height: 46px;
+    */
     top: 0px;
     right: 0px;
+    float: right;
 }
 
 .tz-contact-button-wrapper, .tz-contact-button-overlay-wrapper, .tz-contact-button-overlay {
@@ -699,10 +711,9 @@ p {
 }
 
 .tz-contact-button-image-wrapper {
-    /*
     width: 100%;
     height: 100%;
-    */
+    border: 1px solid #c6c6c6;
 }
 
 .tz-contact-button-image-wrapper.tz-dh-bg {
@@ -714,24 +725,29 @@ p {
 
 .tz-contact-button-image-wrapper.tz-dh-bg.hover {
     /*transform: scale(0.65,0.65);*/
-    transform: scale(0.90,0.90);
+    /*transform: scale(0.90,0.90);*/
 }
 
 
 .tz-contact-button-image-wrapper div, .tz-contact-button-image-wrapper p {
-    float: left;
+    /*float: left;*/
 }
 
 .tz-contact-button-image-wrapper p {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     color: #000;
     text-transform: uppercase;
-    font-size: 24px;
-    line-height: 46px;
-    margin-left: 8px;
+    font-size: 15px;
+    line-height: 45px;
+    text-align: center;
 }
 
+.tz-contact-button-image-wrapper.hover p {
+    color: #fff;
+}
+
+/*
 .tz-contact-button-image {
     width: 46px;
     height: 46px;
@@ -739,11 +755,14 @@ p {
     background-image: url(../images/contact_buttons.png);
     border-radius: 50%;
 }
+*/
 
+/*
 #tz-contact-cancel .tz-contact-button-image {
     background-position: top left;
     background-color: #efefef;
 }
+*/
 
 .tz-contact-button-overlay-wrapper.tz-dh-fg-wrapper {
     z-index: 2;
@@ -751,7 +770,6 @@ p {
 }
 
 .tz-contact-button-overlay {
-    background-color: #bdd4de;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: rgba(0,23,38,0.9);
+    background-color: #ff530d   ;
 }

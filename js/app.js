@@ -17,6 +17,7 @@
 
         initContactAnimation();
         initNavigationAnimation();
+
 /************* temp *////////
         /*
         window.addEventListener("resize", function(e) {
@@ -222,10 +223,12 @@
     }
 
     function initContactAnimation() {
-        var contactButton = document.getElementById("tz-contact-me"),
+        var cancelButton = document.getElementById("tz-contact-cancel"),
+        contactButton = document.getElementById("tz-contact-me"),
         contactContainer = document.getElementById("tz-contact"),
+        dhButtons,
         helloContainer = document.getElementById("tz-header"),
-        cancelButton = document.getElementById("tz-contact-cancel");
+        i;
 
         if (helloContainer && contactButton) {
             contactButton.addEventListener("click", toggleContact);
@@ -249,10 +252,12 @@
                 contactContainer.classList.remove("hide");
                 setPosition(contactContainer, 0, 0);
 
-
-                var dhButtons = document.querySelectorAll(".tz-contact-button"), i;
-                for (i = 0; i < dhButtons.length; i++) {
-                    setDirectionalHoverButton(dhButtons[i]);
+                dhButtons = document.querySelectorAll(".tz-contact-button.animate");
+                if (dhButtons) {
+                    for (i = 0; i < dhButtons.length; i++) {
+                        setDirectionalHoverButton(dhButtons[i]);
+                        dhButtons[i].classList.remove("animate");
+                    }
                 }
 
             }

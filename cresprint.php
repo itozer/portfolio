@@ -45,8 +45,8 @@
 
         <div class="tz-project-screen">
             <div class="tz-project-screen-wrapper">
-                <!--<img data-src="images/projects/cresprint/cresprint_1.png" class="tz-lazy hidden" alt="cresprint1">-->
-                <img data-src="images/projects/cresprint/cresprint_1.png" class="tz-lazy" width="1100px" height="800px" alt="cresprint1">
+                <!--<img data-src="images/projects/cresprint/cresprint_1_s.png" class="tz-lazy hide" width="1300px" height="800px" alt="cresprint1">-->
+                <img src="images/projects/cresprint/cresprint_1.jpg" data-src="images/projects/cresprint/cresprint_1.jpg" class="tz-lazy" width="1300px" height="800px" alt="cresprint1">-->
             </div>
         </div>
 
@@ -60,13 +60,13 @@
 
         <div class="tz-project-screen">
             <div class="tz-project-screen-wrapper">
-                <img data-src="images/projects/cresprint/cresprint_2.png" class="tz-lazy" width="1100px" height="800px" alt="cresprint2">
+                <img data-src="images/projects/cresprint/cresprint_2_s.png" class="tz-lazy" width="1300px" height="800px" alt="cresprint2">
             </div>
         </div>
 
         <div class="tz-project-screen">
             <div class="tz-project-screen-wrapper">
-                <img data-src="images/projects/cresprint/cresprint_3.png" class="tz-lazy" width="1100px" height="800px" alt="cresprint3">
+                <img data-src="images/projects/cresprint/cresprint_3_s.png" class="tz-lazy" width="1300px" height="800px" alt="cresprint3">
             </div>
         </div>
 

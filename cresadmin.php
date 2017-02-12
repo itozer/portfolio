@@ -9,7 +9,7 @@
         $page = "CresAdmin";
         include("include/secondary_navigation.php");
     ?>
-    
+
     <section id="tz-secondary-header">
         <h3>CresAdmin</h3>
         <p>
@@ -22,8 +22,7 @@
 
         <div class="tz-project-screen">
             <div class="tz-project-screen-wrapper">
-                <!--<img data-src="images/projects/cresprint/cresprint_1.png" class="tz-lazy hidden" alt="cresprint1">-->
-                <img data-src="images/projects/cresadmin/cresadmin_1.png" class="tz-lazy" width="1100px" height="800px" alt="cresadmin1">
+                <img src="images/projects/cresadmin/cresadmin_1_s.png" data-src="images/projects/cresadmin/cresadmin_1_s.png" class="tz-lazy" width="1300px" height="800px" alt="cresadmin1">
             </div>
         </div>
 
@@ -32,15 +31,15 @@
 
         <div class="tz-project-screen">
             <div class="tz-project-screen-wrapper">
-                <img data-src="images/projects/cresadmin/cresadmin_2.png" class="tz-lazy" width="1100px" height="800px" alt="cresadmin2">
+                <img data-src="images/projects/cresadmin/cresadmin_2_s.png" class="tz-lazy" width="1300px" height="800px" alt="cresadmin2">
             </div>
         </div>
 
-        <p>Arguable the most used feature in the CresAdmin software is the ability to generate and submit end of year 1099s to both clients and the IRS.</p>
+        <p>Arguably the most used feature in the CresAdmin software is the ability to generate and submit year end 1099s to your payees, as well as to the IRS.</p>
 
         <div class="tz-project-screen">
             <div class="tz-project-screen-wrapper">
-                <img data-src="images/projects/cresadmin/cresadmin_3.png" class="tz-lazy" width="1100px" height="800px" alt="cresadmin3">
+                <img data-src="images/projects/cresadmin/cresadmin_3_s.png" class="tz-lazy" width="1300px" height="800px" alt="cresadmin3">
             </div>
         </div>
 

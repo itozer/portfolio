@@ -30,8 +30,13 @@
         <section id="tz-header">
             <div class="tz-spacer"></div>
             <div id="tz-header-text-wrapper">
+                <!--
                 <h1>Hi!</h1>
                 <h2>My name is <span id="tz-about-me" class="tz-inline tz-highlight">Isaac Tozer</span>. I'm a full stack web developer and interface designer. I like to make things people interact with. Take a look at some of my recent projects. <span id="tz-contact-me" class="tz-inline tz-highlight">Contact</span> me.</h2>
+            -->
+                <h1>Isaac Tozer</h1>
+                <h2>Hi! I'm a full stack web developer and interface designer. I like to make things people interact with. Take a look at some of my recent projects. <span id="tz-contact-me" class="tz-inline tz-highlight">Contact</span> me.</h2>
+
             </div>
             <div class="tz-spacer"></div>
         </section>
@@ -110,7 +115,7 @@
 
         <a class="tz-project tz-dh" href="cresprint.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/cresprint.png" width="545px" height="338px">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/cresprint_s.png" width="545px" height="338px">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">
@@ -122,7 +127,7 @@
 
         <a class="tz-project tz-dh" href="crespro.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/crespro.png" width="545px" height="338px">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/crespro_s.png" width="545px" height="338px">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">
@@ -134,7 +139,7 @@
 
         <a class="tz-project tz-dh" href="cresadmin.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/cresadmin.png" width="545px" height="338px">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/cresadmin_s.png" width="545px" height="338px">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">
@@ -146,7 +151,7 @@
 
         <a class="tz-project tz-dh" href="petdental.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/pet_dental.png" width="545px" height="338px">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/pet_dental.jpg" width="545px" height="338px">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">
@@ -173,7 +178,7 @@
 
         <a class="tz-project tz-dh" href="grapestomp.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/grape_stomp.png" width="545px" height="338px">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/grape_stomp.jpg" width="545px" height="338px">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">

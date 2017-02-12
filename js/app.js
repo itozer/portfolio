@@ -2,8 +2,10 @@
     "use strict";
 
     var cursorDirection = {};
+    cursorDirection.degree = 0;
 
     initLazyLoad("img[data-src]");
+    //initLazyLoad("img.tz-lazy.hide");
     function ready(fn) {
         if (document.readyState !== "loading") {
             fn();
@@ -205,9 +207,7 @@
                         var that = this;
                         setTimeout(function() {
                             console.log("image loaded 2");
-                            //this.classList.remove("hidden");
                             that.classList.add("display");
-
                         }, Math.random() * 250)
                     }
                     img.setAttribute("src",img.getAttribute("data-src"));
@@ -298,12 +298,20 @@
         }
     }
 
+    function swapClass(el, class1, class2) {
+        if (el.classList.contains(class1)) {
+            el.classList.add(class2);
+            el.classList.remove(class1);
+        }
+    }
+
     function isInViewport(el) {
         var rect = el.getBoundingClientRect();
 
         return (
             (rect.bottom >=0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) ||
-            rect.top >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight));
+            rect.top >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+        );
     }
 
     function translateCoords(el, x, y) {

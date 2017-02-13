@@ -4,8 +4,7 @@
     var cursorDirection = {};
     cursorDirection.degree = 0;
 
-    initLazyLoad("img[data-src]");
-    //initLazyLoad("img.tz-lazy.hide");
+    initLazyLoad("img.tz-lazy[data-src]");
     function ready(fn) {
         if (document.readyState !== "loading") {
             fn();
@@ -17,6 +16,7 @@
     ready(function() {
         var dhButtons, dhElements, i;
 
+        initLazyImageLoad("img.tz-fade-up[data-src]");
         initContactAnimation();
         initNavigationAnimation();
 
@@ -190,6 +190,45 @@
         });
     }
 
+    //request all images when dom is ready
+    //display image after loaded, if in the viewport
+    function initLazyImageLoad(query) {
+        var img,
+            imgStubs = document.querySelectorAll(query);
+
+        window.addEventListener("resize", checkViewport);
+        window.addEventListener("scroll", checkViewport);
+
+        [].forEach.call(imgStubs, function(img) {
+            loadLazyImage(img).then(function(loadedImg) {
+                loadedImg.setAttribute("src", loadedImg.getAttribute("data-src"));
+                loadedImg.removeAttribute("data-src");
+                loadedImg.classList.add("loaded");
+                checkViewport();
+            });
+        });
+
+        function loadLazyImage(imgEl) {
+            return new Promise(function(resolve, reject) {
+                imgEl.onload = resolve(imgEl);
+                imgEl.onerror = reject(imgEl);
+            });
+        }
+
+        function checkViewport() {
+            var img, imgs = document.querySelectorAll(".tz-fade-up.loaded");
+            [].forEach.call(imgs, function(img) {
+                var rect = img.getBoundingClientRect();
+
+                if ((rect.bottom >=0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) ||
+                rect.top >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight)) {
+                    swapClass(img, "loaded", "display");
+                }
+            });
+        }
+    }
+
+    //waits to request images until the image container is in the viewport
     function initLazyLoad(query) {
         //lazyLoadImages();
         window.addEventListener("load", lazyLoadImages);
@@ -203,14 +242,19 @@
             // load images that have entered the viewport
             [].forEach.call(imgs, function(img) {
                 if (isInViewport(img, 0)) {
-                    img.onload = function() {
-                        var that = this;
-                        setTimeout(function() {
-                            console.log("image loaded 2");
-                            that.classList.add("display");
-                        }, Math.random() * 250)
+                    if (img.getAttribute("src")) {
+console.log("already has a src");
+                        img.classList.add("display");
+                    } else {
+                        img.onload = function() {
+                            var that = this;
+                            setTimeout(function() {
+                                console.log("image loaded 2");
+                                that.classList.add("display");
+                            }, Math.random() * 250)
+                        }
+                        img.setAttribute("src",img.getAttribute("data-src"));
                     }
-                    img.setAttribute("src",img.getAttribute("data-src"));
                     img.removeAttribute("data-src")
                 }
             });
@@ -343,5 +387,7 @@
             img.src = imgSrcs[i];
         }
     }
+
+
 
 })();

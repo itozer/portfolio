@@ -433,9 +433,8 @@ p {
 }
 */
 
-.tz-lazy {
+.tz-lazy, .tz-fade-up {
     opacity: 0;
-	transition: opacity 0.8s ease-out 0s, transform 0.6s ease-out 0s;
     -webkit-transform: translate(0px, 20px);
     transform: translate(0px, 40px);
 }
@@ -446,9 +445,10 @@ p {
 }
 */
 
-.tz-lazy.display {
+.tz-lazy.display, .tz-fade-up.display {
     opacity: 1.0;
     transform: translate(0px, 0px);
+	transition: opacity 0.8s ease-out 0s, transform 0.6s ease-out 0s;
 }
 
 .tz-project-screen {
@@ -491,6 +491,11 @@ p {
     left: 0;
     max-width: 100%;
     max-height: 100%;
+}
+
+.tz-project-screen-wrapper.tz-psuedo-load {
+    background: top left url(images/projects/cresprint/cresprint_1_bw.jpg) no-repeat;
+    background-size: contain;
 }
 
 .tz-project-screen iframe,

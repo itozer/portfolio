@@ -4,12 +4,6 @@
     var cursorDirection = {};
     cursorDirection.degree = 0;
 
-
-    window.addEventListener("load", function() {
-        initLazyImageLoad("img.tz-fade-up[data-src]");
-    });
-
-
     initLazyLoad("img.tz-lazy[data-src]");
     function ready(fn) {
         if (document.readyState !== "loading") {
@@ -23,6 +17,7 @@
         var dhButtons, dhElements, i;
 
         //initLazyImageLoad("img.tz-fade-up[data-src]");
+        initLazyDisplay("img.tz-lazy-display");
         initContactAnimation();
         initNavigationAnimation();
 
@@ -194,6 +189,24 @@
             //translateCoords(fg, cursorDirection.directionX * 180, cursorDirection.directionY * 50);
             translateCoords(fg, cursorDirection.directionX * 80, cursorDirection.directionY * 20);
         });
+    }
+
+    function initLazyDisplay(query) {
+        window.addEventListener("load", checkViewport);
+        window.addEventListener("resize", checkViewport);
+        window.addEventListener("scroll", checkViewport);
+
+        function checkViewport() {
+            var img, imgs = document.querySelectorAll(query);
+            [].forEach.call(imgs, function(img) {
+                var rect = img.getBoundingClientRect();
+
+                if ((rect.bottom >=0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) ||
+                rect.top >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight)) {
+                    img.classList.add("display");
+                }
+            });
+        }
     }
 
     //request all images when dom is ready

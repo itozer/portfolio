@@ -4,6 +4,12 @@
     var cursorDirection = {};
     cursorDirection.degree = 0;
 
+
+    window.addEventListener("load", function() {
+        initLazyImageLoad("img.tz-fade-up[data-src]");
+    });
+
+
     initLazyLoad("img.tz-lazy[data-src]");
     function ready(fn) {
         if (document.readyState !== "loading") {
@@ -16,7 +22,7 @@
     ready(function() {
         var dhButtons, dhElements, i;
 
-        initLazyImageLoad("img.tz-fade-up[data-src]");
+        //initLazyImageLoad("img.tz-fade-up[data-src]");
         initContactAnimation();
         initNavigationAnimation();
 

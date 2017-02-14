@@ -4,7 +4,6 @@
     var cursorDirection = {};
     cursorDirection.degree = 0;
 
-    initLazyLoad("img.tz-lazy[data-src]");
     function ready(fn) {
         if (document.readyState !== "loading") {
             fn();
@@ -16,7 +15,7 @@
     ready(function() {
         var dhButtons, dhElements, i;
 
-        //initLazyImageLoad("img.tz-fade-up[data-src]");
+        initLazyLoad("img.tz-lazy[data-src]");
         initLazyDisplay("img.tz-lazy-display");
         initContactAnimation();
         initNavigationAnimation();
@@ -37,6 +36,7 @@
 /************* temp *////////
 
         //for page load speed... lets both preload and lazyload large thumb images
+
         preloadImages([].slice.call(document.querySelectorAll(".tz-project-wrapper img[data-src]")).map(function(el) {
              return el.getAttribute("data-src")
          }));
@@ -192,67 +192,38 @@
     }
 
     function initLazyDisplay(query) {
-        window.addEventListener("load", checkViewport);
-        window.addEventListener("resize", checkViewport);
-        window.addEventListener("scroll", checkViewport);
-
-        function checkViewport() {
-            var img, imgs = document.querySelectorAll(query);
-            [].forEach.call(imgs, function(img) {
-                var rect = img.getBoundingClientRect();
-
-                if ((rect.bottom >=0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) ||
-                rect.top >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight)) {
-                    img.classList.add("display");
-                }
-            });
-        }
-    }
-
-    //request all images when dom is ready
-    //display image after loaded, if in the viewport
-    function initLazyImageLoad(query) {
-        var img,
-            imgStubs = document.querySelectorAll(query);
-
-        window.addEventListener("resize", checkViewport);
-        window.addEventListener("scroll", checkViewport);
-
-        [].forEach.call(imgStubs, function(img) {
-            loadLazyImage(img).then(function(loadedImg) {
-                loadedImg.setAttribute("src", loadedImg.getAttribute("data-src"));
-                loadedImg.removeAttribute("data-src");
-                loadedImg.classList.add("loaded");
-                checkViewport();
-            });
-        });
-
-        function loadLazyImage(imgEl) {
-            return new Promise(function(resolve, reject) {
-                imgEl.onload = resolve(imgEl);
-                imgEl.onerror = reject(imgEl);
-            });
+        if (document.querySelectorAll(query).length > 0) {
+            window.addEventListener("load", checkViewport);
+            window.addEventListener("resize", checkViewport);
+            window.addEventListener("scroll", checkViewport);
         }
 
         function checkViewport() {
-            var img, imgs = document.querySelectorAll(".tz-fade-up.loaded");
-            [].forEach.call(imgs, function(img) {
-                var rect = img.getBoundingClientRect();
-
-                if ((rect.bottom >=0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) ||
-                rect.top >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight)) {
-                    swapClass(img, "loaded", "display");
-                }
-            });
+            var img, imgs = document.querySelectorAll(query + ":not(.display)");
+            if (imgs.length > 0) {
+                [].forEach.call(imgs, function(img) {
+                    var rect = img.getBoundingClientRect();
+                    if ((rect.bottom >=0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) ||
+                    rect.top >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight)) {
+                        img.classList.add("display");
+                    }
+                });
+            } else {
+                window.removeEventListener("load", checkViewport);
+                window.removeEventListener("resize", checkViewport);
+                window.removeEventListener("scroll", checkViewport);
+            }
         }
     }
 
     //waits to request images until the image container is in the viewport
     function initLazyLoad(query) {
         //lazyLoadImages();
-        window.addEventListener("load", lazyLoadImages);
-        window.addEventListener("resize", lazyLoadImages);
-        window.addEventListener("scroll", lazyLoadImages);
+        if (document.querySelectorAll(query).length > 0) {
+            window.addEventListener("load", lazyLoadImages);
+            window.addEventListener("resize", lazyLoadImages);
+            window.addEventListener("scroll", lazyLoadImages);
+        }
 
         function lazyLoadImages(load) {
             var img, imgs = document.querySelectorAll(query);
@@ -262,7 +233,7 @@
             [].forEach.call(imgs, function(img) {
                 if (isInViewport(img, 0)) {
                     if (img.getAttribute("src")) {
-console.log("already has a src");
+//console.log("already has a src");
                         img.classList.add("display");
                     } else {
                         img.onload = function() {
@@ -279,6 +250,7 @@ console.log("already has a src");
             });
             // if all the images are loaded, stop calling the handler
             if (imgs.length === 0) {
+                window.removeEventListener("load", lazyLoadImages);
                 window.removeEventListener("resize", lazyLoadImages);
                 window.removeEventListener("scroll", lazyLoadImages);
             }

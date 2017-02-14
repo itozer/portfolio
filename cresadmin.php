@@ -22,7 +22,7 @@
 
         <div class="tz-project-screen">
             <div class="tz-project-screen-wrapper">
-                <img src="images/projects/cresadmin/cresadmin_1_s.png" data-src="images/projects/cresadmin/cresadmin_1_s.png" class="tz-lazy" width="1300px" height="800px" alt="cresadmin1">
+                <img src="images/projects/cresadmin/cresadmin_1_s.png" class="tz-lazy-display" width="1300px" height="800px" alt="cresadmin1">
             </div>
         </div>
 
@@ -31,7 +31,7 @@
 
         <div class="tz-project-screen">
             <div class="tz-project-screen-wrapper">
-                <img data-src="images/projects/cresadmin/cresadmin_2_s.png" class="tz-lazy" width="1300px" height="800px" alt="cresadmin2">
+                <img src="images/projects/cresadmin/cresadmin_2_s.png" class="tz-lazy-display" width="1300px" height="800px" alt="cresadmin2">
             </div>
         </div>
 
@@ -39,7 +39,7 @@
 
         <div class="tz-project-screen">
             <div class="tz-project-screen-wrapper">
-                <img data-src="images/projects/cresadmin/cresadmin_3_s.png" class="tz-lazy" width="1300px" height="800px" alt="cresadmin3">
+                <img src="images/projects/cresadmin/cresadmin_3_s.png" class="tz-lazy-display" width="1300px" height="800px" alt="cresadmin3">
             </div>
         </div>
 

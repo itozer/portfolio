@@ -1,4 +1,5 @@
     <title>Isaac Tozer</title>
+    <meta name="description" content="Hi! My name is Isaac Tozer. I'm a full stack web developer and interface designer. Take a look at some of my recent projects.">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--

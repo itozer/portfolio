@@ -31,7 +31,7 @@
 
             <div class="tz-project-screen">
                 <div class="tz-project-screen-wrapper">
-                    <img src="images/projects/skydump/skydump_1_s.jpg" class="tz-lazy-display" width="1100px" height="800px" alt="skydump1">
+                    <img src="images/projects/skydump/skydump_1_s.jpg" class="tz-lazy-display" width="1100" height="800" alt="skydump1">
                 </div>
             </div>
 

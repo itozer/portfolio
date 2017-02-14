@@ -99,23 +99,9 @@
 
     <section id="tz-projects">
 
-<!--
-        <a class="tz-project" href="cresprint.php">
-            <div class="tz-project-image-wrapper">
-                <img class="tz-project-image tz-lazy" data-src="images/project_thumbs/545x338/cresprint.png" width="545px" height="338px">
-            </div>
-            <div class="tz-description-wrapper">
-                <div class="tz-description">
-                    <h3>CresPrint</h3>
-                    <p>A fully customizable web to print solution</p>
-                </div>
-            </div>
-        </a>
--->
-
         <a class="tz-project tz-dh" href="cresprint.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/cresprint_s.png" width="545px" height="338px">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/cresprint_s.png" width="545" height="338" alt="cresprint">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">
@@ -127,7 +113,7 @@
 
         <a class="tz-project tz-dh" href="crespro.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/crespro_s.png" width="545px" height="338px">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/crespro_s.png" width="545" height="338" alt="crespro">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">
@@ -139,7 +125,7 @@
 
         <a class="tz-project tz-dh" href="cresadmin.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/cresadmin_s.png" width="545px" height="338px">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/cresadmin_s.png" width="545" height="338" alt="cresadmin">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">
@@ -151,14 +137,14 @@
 
         <a class="tz-project tz-dh" href="petdental.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/pet_dental.jpg" width="545px" height="338px">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/pet_dental.jpg" width="545" height="338" alt="petdental">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">
                     <h3>PetDental</h3>
                     <p>
                         PetDental is an iPhone app designed to help you improve the health of your dogs or cats teeth
-                        and gums with the help of a professional veterinarian
+                        and gums with the assistance of a professional veterinarian
                     </p>
                 </div>
             </div>
@@ -166,7 +152,7 @@
 
         <a class="tz-project tz-dh" href="skydump.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/skydump.png" width="545px" height="338px">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/skydump.png" width="545" height="338" alt="skydump">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">
@@ -178,7 +164,7 @@
 
         <a class="tz-project tz-dh" href="grapestomp.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/grape_stomp.jpg" width="545px" height="338px">
+                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/grape_stomp.jpg" width="545" height="338" alt="grapestomp">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">

@@ -62,7 +62,6 @@ h2 {
 
 #tz-secondary-header h3 {
     font-family: 'Lato', sans-serif;
-    /*font-family: 'Open Sans', sans-serif;*/
     font-size: 3.7em;
     line-height: 1.3em;
     font-weight: 400;
@@ -85,11 +84,6 @@ p {
 
 #tz-projects {
     width: 100%;
-    /*
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    */
     max-width: 1700px;
 }
 
@@ -100,7 +94,6 @@ p {
 }
 
 #tz-header, #tz-contact {
-    /*height: 350px;*/
     height: 100%;
     width: 100%;
     display: flex;
@@ -141,38 +134,12 @@ p {
     z-index: 3;
 }
 
-/*
-#tz-header-top-line-secondary {
-    width: 100%;
-    height: 14px;
-    background: rgba(0,23,38,0.9);
-    display: block;
-	transition: height 0.30s ease-out 0s;
-}
-*/
-
-/*
-#tz-header-top-line-secondary.hide {
-    height: 0px;
-}
-
-/*
-#tz-header-fat-line {
-    width: 100%;
-    height: 350px;
-    background-color: #fff;
-	transition: all 0.25s linear 0s;
-}
-*/
-
 #tz-header-text-wrapper, #tz-header-contact-wrapper {
     margin: auto;
-    /*width: 80%;*/
     padding: 0 0.8%;
     max-width: 1360px;
     flex: 8;
     overflow: hidden;
-	/*transition: opacity 0.6s ease-out 0s, transform 0.6s ease-out 0s;*/
 	transition: all 0.6s ease-out 0s;
 }
 
@@ -184,21 +151,6 @@ p {
     color: #ff530d;
     cursor: pointer;
     font-size: 1.0em;
-	/*transition: all 0.12s ease-out 0s;
-    border-left: 8px solid #efefef;
-    border-right: 8px solid #efefef;
-    margin: 0 -8px 0 -8px;*/
-}
-
-.tz-highlight:hover {
-    /*
-    background-color: #bdd4de;
-    color: #3f5765;
-    border-left: 8px solid #bdd4de;
-    border-right: 8px solid #bdd4de;
-    margin: 0 -8px 0 -8px;
-    text-decoration: underline;
-    */
 }
 
 #tz-projects {
@@ -206,16 +158,6 @@ p {
     width: 98%;
     margin: 0.4em auto;
     max-width: 1700px;
-
-
-}
-
-#temp-trial {
-    -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 1.5s; /* Firefox < 16 */
-    -ms-animation: fadein 1.5s; /* Internet Explorer */
-    -o-animation: fadein 1.5s; /* Opera < 12.1 */
-    animation: fadein 1.5s;
 }
 
 #tz-project {
@@ -231,17 +173,7 @@ p {
     100%   { opacity: 1; }
 }
 
-/*
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-*/
-
 .tz-project {
-    /*display: block;
-    position: relative;
-    */
     float: left;
     width: 32%;
     margin: .6%;
@@ -249,70 +181,32 @@ p {
     border: 1px solid #fff;
     overflow: hidden;
     cursor: pointer;
-    /*background-color: #f5f5f5;*/
 }
 
 .tz-project-image-wrapper {
     width: 100%;
     margin: 0;
     padding-top: 62.0%;
-    /*
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    */
-    /*display: block;*/
 }
 
 .tz-project-image {
     max-width: 100%;
     max-height: 100%;
-    /*
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    */
-	/*transition: all 0.15s ease-out 0s;*/
 }
-
-/*
-.tz-project-image.hover {
-    transform: scale(1.01,1.01);
-    opcacity: 0.6;
-}
-*/
 
 .tz-description-wrapper {
     width: 100%;
     height: 100%;
-    /*
-    opacity: 0.0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-	transition: all 0.15s linear 0s;
-    */
-
     display: flex;
     align-items: center;
     padding: 0 5% 0 5%;
-
 }
-
-/*
-.tz-description-wrapper:hover {
-    opacity: 1.0;
-}
-*/
 
 .tz-description h3 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    /*font-family: 'Lato', sans-serif;*/
     font-size: 2.5em;
     line-height: 1.2em;
-    /*text-transform: uppercase;*/
     color: #fff;
     padding: 2px 0 0px 0;
 }
@@ -324,17 +218,6 @@ p {
     font-weight: 300;
     color: #fff;
 }
-
-/*
-.tz-description {
-	transition: all 0.10s ease-out 0s;
-    opacity: 0.0;
-}
-
-.tz-description.hover {
-    opacity: 1.0;
-}
-*/
 
 .tz-info-wrapper {
     position: absolute;
@@ -350,12 +233,10 @@ p {
     background-size: 50% 50%;
     background-position: center center;
     background-image: url("../images/info.png");
-    /*background-image: url("../images/touch_icons.png");*/
 }
 
 .tz-info-wrapper.active {
     background-image: url("../images/close.png");
-    /*background-position: right center;*/
 }
 
 .tz-project-wrapper {
@@ -369,13 +250,11 @@ p {
     color: #000;
     margin: 0 auto;
     text-align: center;
-
     font-family: 'Open Sans', sans-serif;
     color: #000;
     font-size: 1.3em;
     line-height: 1.5em;
     font-weight: 300;
-
 }
 
 #tz-secondary-header {
@@ -404,18 +283,14 @@ p {
 }
 
 #tz-logo img {
-	/*transition: opacity 0.6s ease-out 0s, transform 0.6s ease-out 0s;*/
 	transition: transform 0.4s ease-out 0s;
     transform: translate(-1px, 1px) rotate(-30deg);
-    /*transform: rotate(-30deg);*/
     opacity: 1.0;
-    /*transform: rotate(-30deg);*/
     transform-origin: center center;
 }
 
 #tz-logo img.animateIn {
     transform: translate(0px) rotate(0deg);
-    /*transform: rotate(0deg);*/
     opacity: 1.0;
 }
 
@@ -423,27 +298,13 @@ p {
     float: left;
     padding: 0 0 0 10px;
     color: #000;
-	/*transition: transform 0.6s ease-out 0s;
-    transform: translate(-10px);*/
 }
-
-/*
-#tz-bread-crumb p.animateIn {
-    transform: translate(0px);
-}
-*/
 
 .tz-lazy, .tz-fade-up, .tz-lazy-display {
     opacity: 0;
     -webkit-transform: translate(0px, 20px);
     transform: translate(0px, 40px);
 }
-
-/*
-.tz-lazy.hide {
-    opacity: 0.0;
-}
-*/
 
 .tz-lazy.display, .tz-fade-up.display, .tz-lazy-display.display {
     opacity: 1.0;
@@ -456,7 +317,6 @@ p {
     max-width: 1000px;
     margin: 1% auto 0 auto;
     position: relative;
-    /*overflow: hidden;*/
     background-color: #fff;
 }
 
@@ -464,7 +324,6 @@ p {
     width: 100%;
     border: 1px solid #ccc;
     border: 1px solid #c6c6c6;
-
 }
 
 .tz-project-screen video {
@@ -521,19 +380,7 @@ p {
 }
 
 #tz-contact-actions {
-/*
-    height: 46px;
-    width: 100%;
-*/
     margin-top: 15px;
-}
-
-#tz-contact-actions:before {
-    /*
-    content: " ";
-    display: table;
-    clear: both;
-    */
 }
 
 #tz-contact input {
@@ -555,7 +402,6 @@ p {
     margin-bottom: 15px;
 }
 
-
 #tz-contact textarea {
     width: 100%;
     height: 154px;
@@ -569,69 +415,6 @@ p {
     background-color: #efefef;
 }
 
-/*
-#tz-cancel-contact {
-    float: left;
-}
-
-#tz-send-contact {
-    float: right;
-
-}
-
-.tz-contact-button {
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.tz-contact-button p {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  color: #000;
-  text-transform: uppercase;
-  font-size: 24px;
-  line-height: 46px;
-  margin-left: 8px;
-}
-
-.tz-contact-button .tz-contact-button-image {
-    width: 46px;
-    height: 46px;
-    background-repeat: no-repeat;
-    background-image: url(../images/contact_buttons.png);
-    border-radius: 50%;
-}
-
-.tz-contact-button div, .tz-contact-button p {
-    float: left;
-}
-
-.tz-contact-button-image, .tz-contact-button p {
-	transition: background-color 0.30s ease-out 0s, transform 0.30s ease-out 0s;
-}
-
-#tz-contact .tz-contact-button:hover .tz-contact-button-image {
-    transform: rotate(8deg);
-}
-
-.tz-contact-button:hover p {
-    color: #ff530d;
-}
-
-#tz-send-contact .tz-contact-button-image {
-    background-position: top right;
-    background-color: #000;
-}
-
-#tz-cancel-contact .tz-contact-button-image {
-    background-position: top left;
-    background-color: #efefef;
-}
-
-#tz-cancel-contact:hover .tz-contact-button-image {
-}
-*/
-
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #000;
   opacity: 0.7;
@@ -639,6 +422,7 @@ p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
+
 ::-moz-placeholder { /* Firefox 19+ */
   color: #000;
   opacity: 0.7;
@@ -646,6 +430,7 @@ p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
+
 :-ms-input-placeholder { /* IE 10+ */
   color: #000;
   opacity: 0.7;
@@ -653,6 +438,7 @@ p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
+
 :-moz-placeholder { /* Firefox 18- */
   color: #000;
   opacity: 0.7;
@@ -677,25 +463,13 @@ p {
 }
 
 #tz-contact-cancel {
-    /*
-    width: 162px;
-    height: 62px;
-    width: 142px;
-    height: 46px;
-    */
     top: 0px;
     left: 0px;
     float: left;
 }
 
 #tz-contact-send{
-    /*
-    width: 162px;
-    height: 62px;
-    width: 142px;
-    height: 46px;
-    */
-    top: 0px;
+   top: 0px;
     right: 0px;
     float: right;
 }
@@ -727,17 +501,6 @@ p {
     background-color: rgba(255,83,13,0.9);
 }
 
-
-.tz-contact-button-image-wrapper.tz-dh-bg.hover {
-    /*transform: scale(0.65,0.65);*/
-    /*transform: scale(0.90,0.90);*/
-}
-
-
-.tz-contact-button-image-wrapper div, .tz-contact-button-image-wrapper p {
-    /*float: left;*/
-}
-
 .tz-contact-button-image-wrapper p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -751,23 +514,6 @@ p {
 .tz-contact-button-image-wrapper.hover p {
     color: #fff;
 }
-
-/*
-.tz-contact-button-image {
-    width: 46px;
-    height: 46px;
-    background-repeat: no-repeat;
-    background-image: url(../images/contact_buttons.png);
-    border-radius: 50%;
-}
-*/
-
-/*
-#tz-contact-cancel .tz-contact-button-image {
-    background-position: top left;
-    background-color: #efefef;
-}
-*/
 
 .tz-contact-button-overlay-wrapper.tz-dh-fg-wrapper {
     z-index: 2;

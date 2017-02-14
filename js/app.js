@@ -37,9 +37,11 @@
 /************* temp *////////
 
         //for page load speed... lets both preload and lazyload large thumb images
+        /*
         preloadImages([].slice.call(document.querySelectorAll(".tz-project-wrapper img[data-src]")).map(function(el) {
              return el.getAttribute("data-src")
          }));
+         */
 
 
         dhElements = document.querySelectorAll(".tz-project");

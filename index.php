@@ -101,7 +101,7 @@
 
         <a class="tz-project tz-dh" href="cresprint.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/cresprint_s.png" width="545" height="338" alt="cresprint">
+                <img src="images/blank.gif" class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/cresprint_s.png" width="545" height="338" alt="cresprint">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">
@@ -113,7 +113,7 @@
 
         <a class="tz-project tz-dh" href="crespro.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/crespro_s.png" width="545" height="338" alt="crespro">
+                <img src="images/blank.gif" class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/crespro_s.png" width="545" height="338" alt="crespro">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">
@@ -125,7 +125,7 @@
 
         <a class="tz-project tz-dh" href="cresadmin.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/cresadmin_s.png" width="545" height="338" alt="cresadmin">
+                <img src="images/blank.gif" class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/cresadmin_s.png" width="545" height="338" alt="cresadmin">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">
@@ -137,7 +137,7 @@
 
         <a class="tz-project tz-dh" href="petdental.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/pet_dental.jpg" width="545" height="338" alt="petdental">
+                <img src="images/blank.gif" class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/pet_dental.jpg" width="545" height="338" alt="petdental">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">
@@ -152,7 +152,7 @@
 
         <a class="tz-project tz-dh" href="skydump.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/skydump.png" width="545" height="338" alt="skydump">
+                <img src="images/blank.gif" class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/skydump.png" width="545" height="338" alt="skydump">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">
@@ -164,7 +164,7 @@
 
         <a class="tz-project tz-dh" href="grapestomp.php">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
-                <img class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/grape_stomp.jpg" width="545" height="338" alt="grapestomp">
+                <img src="images/blank.gif" class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/grape_stomp.jpg" width="545" height="338" alt="grapestomp">
             </div>
             <div class="tz-description-wrapper tz-dh-fg-wrapper">
                 <div class="tz-description tz-dh-fg">

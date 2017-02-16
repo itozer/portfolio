@@ -230,10 +230,12 @@
             // load images that have entered the viewport
             [].forEach.call(imgs, function(img) {
                 if (isInViewport(img, 0)) {
+                    /*
                     if (img.getAttribute("src")) {
 //console.log("already has a src");
                         img.classList.add("display");
                     } else {
+                    */
                         img.onload = function() {
                             var that = this;
                             setTimeout(function() {
@@ -242,7 +244,7 @@
                             }, Math.random() * 250)
                         }
                         img.setAttribute("src",img.getAttribute("data-src"));
-                    }
+                    //}
                     img.removeAttribute("data-src")
                 }
             });

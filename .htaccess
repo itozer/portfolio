@@ -1,0 +1,7 @@
+# Use PHP7 Single php.ini as default
+AddHandler application/x-httpd-php70s .php
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

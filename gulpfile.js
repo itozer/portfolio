@@ -5,9 +5,10 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css');
 
 //script paths
-var jsFiles = 'js/**/*.js',
+//var jsFiles = 'js/**/*.js',
+var jsFiles = 'js/*.js',
     jsDest = 'dist/js',
-    cssFiles = 'css/**/*.css',
+    cssFiles = 'css/*.css',
     cssDest = 'dist/css';
 
 gulp.task("default", ["scripts", "css"]);
@@ -23,6 +24,8 @@ gulp.task('scripts', function() {
 
 gulp.task('css', function() {
   return gulp.src(cssFiles)
+    .pipe(concat('styles.css'))
     .pipe(cleanCSS({compatibility: 'ie10'}))
+    .pipe(rename('styles.min.css'))
     .pipe(gulp.dest(cssDest));
 });

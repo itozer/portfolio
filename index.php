@@ -174,6 +174,19 @@
             </div>
         </a>
 
+        <a class="tz-project tz-dh" href="dinoghosts">
+            <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
+                <img src="images/blank.gif" class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/dinosaur_ghosts.png" width="545" height="338" alt="dinosaur ghosts">
+            </div>
+            <div class="tz-description-wrapper tz-dh-fg-wrapper">
+                <div class="tz-description tz-dh-fg">
+                    <h3>Dinosaur Ghosts</h3>
+                    <p>Why isn't this a thing?! Someone make the movie already</p>
+                </div>
+            </div>
+        </a>
+
+
     </section>
 
 </body>

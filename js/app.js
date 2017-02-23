@@ -103,7 +103,6 @@
 
             //i may want to unselect the others...
             //var active = document.querySelectorAll(".tz-info-wrapper.active");
-
             that.setAttribute("style", "width: 40px; height: 40px; bottom: 15px; right: 15px;");
             setTimeout(function() {
                 that.setAttribute("style", "width: 50px; height: 50px");

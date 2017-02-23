@@ -7,9 +7,9 @@ var gulp = require('gulp'),
 //script paths
 //var jsFiles = 'js/**/*.js',
 var jsFiles = 'js/*.js',
-    jsDest = 'dist/js',
+    jsDest = 'dist',
     cssFiles = 'css/*.css',
-    cssDest = 'dist/css';
+    cssDest = 'dist';
 
 gulp.task("default", ["scripts", "css"]);
 

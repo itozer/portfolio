@@ -16,9 +16,11 @@
         var dhButtons, dhElements, i;
 
         initLazyLoad("img.tz-lazy[data-src]");
-        initLazyDisplay("img.tz-lazy-display");
+        //initLazyDisplay("img.tz-lazy-display");
+        initLazyDisplay("tz-lazy-display");
         initContactAnimation();
         initNavigationAnimation();
+        initPetdentalCarausel();
 
 /************* temp *////////
         /*
@@ -189,20 +191,25 @@
     }
 
     function initLazyDisplay(query) {
-        if (document.querySelectorAll(query).length > 0) {
+        if (document.querySelectorAll("img." + query).length > 0) {
             window.addEventListener("load", checkViewport);
             window.addEventListener("resize", checkViewport);
             window.addEventListener("scroll", checkViewport);
         }
 
         function checkViewport() {
-            var img, imgs = document.querySelectorAll(query + ":not(.display)");
+            var img, imgs = document.querySelectorAll("img." + query + ":not(.display)"), secondaries;
             if (imgs.length > 0) {
                 [].forEach.call(imgs, function(img) {
                     var rect = img.getBoundingClientRect();
                     if ((rect.bottom >=0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) ||
                     rect.top >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight)) {
                         img.classList.add("display");
+                        //also show any secondary elements
+                        secondaries = img.parentNode.querySelectorAll("." + query + "-secondary");
+                        [].forEach.call(secondaries, function(el) {
+                            el.classList.add("display");
+                        });
                     }
                 });
             } else {
@@ -238,7 +245,7 @@
                         img.onload = function() {
                             var that = this;
                             setTimeout(function() {
-                                console.log("image loaded 2");
+                                //console.log("image loaded 2");
                                 that.classList.add("display");
                             }, Math.random() * 250)
                         }
@@ -298,7 +305,6 @@
         }
     }
 
-
     function initNavigationAnimation() {
         var logo = document.querySelector("#tz-logo img"),
         prevDirection = 0,
@@ -332,11 +338,64 @@
         }
     }
 
-    function swapClass(el, class1, class2) {
-        if (el.classList.contains(class1)) {
-            el.classList.add(class2);
-            el.classList.remove(class1);
+    function initPetdentalCarausel() {
+        var backgroundPosition, carausel, debounce, distance, nextButton, numSlides, previousButton, slideNumber;
+
+        carausel = document.getElementById("tz-petdental-carausel-wrapper");
+        if (carausel) {
+            distance = 25.0;
+            slideNumber = 1;
+            numSlides = 5;
+            nextButton = document.getElementById("tz-petdental-carausel-next");
+            previousButton = document.getElementById("tz-petdental-carausel-previous");
+            debounce = false;
+
+            nextButton.addEventListener("click", function() {
+                    if (slideNumber < numSlides && !debounce) {
+                        setDebounce();
+                        slideNumber += 1;
+                        setButtonState();
+                        backgroundPosition = window.getComputedStyle(carausel,null).backgroundPosition.trim().split(/\s+/)
+                        carausel.style.backgroundPosition = "" + (parseFloat(backgroundPosition[0]) + distance) + "% 0";
+                    }
+            });
+
+            previousButton.addEventListener("click", function() {
+                    if (slideNumber > 1 && !debounce) {
+                        setDebounce();
+                        slideNumber-= 1;
+                        setButtonState();
+                        backgroundPosition = window.getComputedStyle(carausel,null).backgroundPosition.trim().split(/\s+/)
+                        carausel.style.backgroundPosition = "" + (parseFloat(backgroundPosition[0]) - distance) + "% 0";
+                    }
+            });
+
+            function setDebounce() {
+                debounce = !debounce;
+                setTimeout(function() {
+                    debounce = !debounce;
+                },410);
+            }
+
+            function setButtonState() {
+//console.log("setButtonState");
+//console.log(slideNumber);
+                if (slideNumber === 1) {
+                    previousButton.classList.add("disabled");
+                } else if (slideNumber === numSlides) {
+                    nextButton.classList.add("disabled");
+                } else {
+                    previousButton.classList.remove("disabled");
+                    nextButton.classList.remove("disabled");
+                }
+
+            }
         }
+    }
+
+    function swapClass(el, class1, class2) {
+        el.classList.add(class2);
+        el.classList.remove(class1);
     }
 
     function isInViewport(el) {

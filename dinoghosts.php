@@ -12,7 +12,7 @@
 
     <section id="tz-secondary-header">
         <h3>Dinosaur Ghosts</h3>
-        <p>Why do I never hear about dinosaur ghosts? More importantly, why has there never been a movie about dinosaur ghosts?! This site is basically a plea to hollywood. Make the movie! <a href="http://dinosaurghosts.com" target="_blank">dinosaurghosts.com</a></p>
+        <p>Why do I never hear about dinosaur ghosts? More importantly, why has there never been a movie about dinosaur ghosts?! Someone make the movie already! <a href="http://dinosaurghosts.com" target="_blank">dinosaurghosts.com</a></p>
     </section>
 
     <section id="tz-project-cresadmin" class="tz-project-wrapper">

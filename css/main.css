@@ -14,6 +14,10 @@ body {
     transition: none!important;
 }
 
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 a:link {
     color: #3f5765;
     text-decoration: none;
@@ -312,6 +316,16 @@ p {
 	transition: opacity 0.8s ease-out 0s, transform 0.6s ease-out 0s;
 }
 
+.tz-lazy-display-secondary {
+    opacity: 0;
+	transition: opacity 0.8s ease-out 0s;
+}
+
+.tz-lazy-display-secondary.display {
+    opacity: 1.0;
+}
+
+
 .tz-project-screen {
     width: 96%;
     max-width: 1000px;
@@ -522,5 +536,81 @@ p {
 
 .tz-contact-button-overlay {
     background-color: rgba(0,23,38,0.9);
-    background-color: #ff530d   ;
+    background-color: #ff530d;
+}
+
+#tz-petdental-carausel-wrapper {
+    background-image: url("../images/projects/petdental/slides.png");*/
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    position: absolute;
+    top: 11%;
+    left: 29.5%;
+    width: 41%;
+    padding-top: 34%;
+    z-index: 2;
+    transition: background-position 0.4s ease-out, opacity 0.8s ease-out;
+}
+
+.tz-carausel-navigation {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 35%;
+    z-index: 2;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.tz-carausel-navigation.disabled {
+    cursor: default;
+}
+
+#tz-petdental-carausel-next {
+    right: 5%;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-left: 7%;
+    overflow: hidden;
+}
+#tz-petdental-carausel-next:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top:-500px;
+    margin-left: -500px;
+
+    border-top: 500px solid transparent;
+    border-bottom: 500px solid transparent;
+    border-left: 500px solid #333;
+}
+
+#tz-petdental-carausel-next.disabled:after {
+    border-left: 500px solid #777;
+}
+
+#tz-petdental-carausel-previous {
+    left: 5%;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-right: 7%;
+    overflow: hidden;
+}
+#tz-petdental-carausel-previous:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top:-500px;
+    margin-right: -500px;
+
+    border-top: 500px solid transparent;
+    border-bottom: 500px solid transparent;
+    border-right: 500px solid #333;
+}
+
+#tz-petdental-carausel-previous.disabled:after {
+    border-right: 500px solid #777;
 }

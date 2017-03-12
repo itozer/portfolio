@@ -25,7 +25,6 @@
     <div id="tz-header-top-line"></div>
 
 
-
     <div id="tz-header-wrapper">
         <section id="tz-header">
             <div class="tz-spacer"></div>
@@ -135,7 +134,7 @@
             </div>
         </a>
 
-        <a class="tz-project tz-dh" href="petdental">
+        <a class="tz-project tz-dh" href="petdentalapp">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
                 <img src="images/blank.gif" class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/pet_dental.jpg" width="545" height="338" alt="petdental">
             </div>
@@ -143,8 +142,7 @@
                 <div class="tz-description tz-dh-fg">
                     <h3>PetDental</h3>
                     <p>
-                        PetDental is an iPhone app designed to help you improve the health of your dogs or cats teeth
-                        and gums with the assistance of a professional veterinarian
+                        PetDental is an iPhone app designed to help you improve the health of your dogs or cats teeth and gums with the assistance of a professional veterinarian
                     </p>
                 </div>
             </div>

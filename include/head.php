@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/directionalHover.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <!--
-    <script src="dist/scripts.min.js" type="text/javascript"></script>
+    <script src="dist/scripts.min.js" type="text/javascript" async></script>
     <link rel="stylesheet" type="text/css" href="dist/styles.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans:300,400,600" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico" />

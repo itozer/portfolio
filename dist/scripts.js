@@ -306,7 +306,8 @@
     }
 
     function initNavigationAnimation() {
-        var logo = document.querySelector("#tz-logo img"),
+        //var logo = document.querySelector("#tz-logo img"),
+        var logo = document.getElementById("tz-logo"),
         prevDirection = 0,
         prevY = 0,
         topLine = document.getElementById("tz-header-top-line");

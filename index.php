@@ -21,9 +21,10 @@
     </a>
 -->
 
-
-    <div id="tz-header-top-line"></div>
-
+<?php
+    $page = "";
+    include("include/header_top.php");
+?>
 
     <div id="tz-header-wrapper">
         <section id="tz-header">
@@ -34,7 +35,7 @@
                 <h2>My name is <span id="tz-about-me" class="tz-inline tz-highlight">Isaac Tozer</span>. I'm a full stack web developer and interface designer. I like to make things people interact with. Take a look at some of my recent projects. <span id="tz-contact-me" class="tz-inline tz-highlight">Contact</span> me.</h2>
             -->
                 <h1>Isaac Tozer</h1>
-                <h2>Hi! I'm a full stack web developer and interface designer. I like to make things people interact with. Take a look at some of my recent projects. <span id="tz-contact-me" class="tz-inline tz-highlight">Contact</span> me.</h2>
+                <h2>Hi. I'm a full stack web developer and interface designer. I like to make things people interact with. Take a look at some of my recent projects.</h2>
 
             </div>
             <div class="tz-spacer"></div>
@@ -160,6 +161,7 @@
             </div>
         </a>
 
+<!--
         <a class="tz-project tz-dh" href="grapestomp">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">
                 <img src="images/blank.gif" class="tz-project-image tz-lazy tz-dh-bg" data-src="images/project_thumbs/545x338/grape_stomp.jpg" width="545" height="338" alt="grapestomp">
@@ -171,6 +173,7 @@
                 </div>
             </div>
         </a>
+-->
 
         <a class="tz-project tz-dh" href="dinoghosts">
             <div class="tz-project-image-wrapper tz-dh-bg-wrapper">

@@ -7,7 +7,7 @@
 
     <?php
         $page = "PetDental";
-        include("include/secondary_navigation.php");
+        include("include/header_top.php");
     ?>
 
     <section id="tz-secondary-header">
@@ -24,7 +24,7 @@
                 <div id="tz-petdental-carausel-wrapper" class="tz-lazy-display-secondary"></div>
                 <div id="tz-petdental-carausel-next" class="tz-carausel-navigation tz-lazy-display-secondary"></div>
                 <div id="tz-petdental-carausel-previous" class="tz-carausel-navigation disabled tz-lazy-display-secondary"></div>
-                
+
                 <img src="images/projects/petdental/petdental_carausel_frame.jpg" class="tz-lazy-display" width="1300" height="800" alt="petdental carausel">
             </div>
         </div>

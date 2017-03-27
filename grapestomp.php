@@ -7,7 +7,7 @@
 
     <?php
         $page = "The Great Grape Stomp";
-        include("include/secondary_navigation.php");
+        include("include/header_top.php");
     ?>
 </body>
 </html>

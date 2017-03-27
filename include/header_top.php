@@ -7,7 +7,7 @@
                 <span>Isaac Tozer</span>
             </a>
                 <?php
-                    echo (strlen($page) > 0? "<span><span style='font-size: 1em;'>></span> " . $page . "</span>": "");
+                    echo (strlen($page) > 0? "<span style='font-size: 0.6em; font-weight: 600;'>></span> <span>" . $page . "</span>": "");
                 ?>
         </div>
         <div id="tz-bread-right">

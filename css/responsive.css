@@ -86,6 +86,10 @@
           height: 90px;
       }
 
+      #tz-bread-right {
+          display: none;
+      }
+
 
   }
 

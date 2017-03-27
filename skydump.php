@@ -13,7 +13,7 @@
     <section id="tz-secondary-header">
         <h3>SkyDump</h3>
         <p>
-            Walking to the bathroom only to find out its currently occupied sucks. Sometimes you REALLY have to go. SkyDump tells you what bathrooms are available in your office before you get up, so that you don't have to walk around looking for one that is free. You can check out a demo of the app <a href="http://skydump.info" target="_blank">here</a>, or below.
+            Walking to the bathroom only to find out its occupied sucks. SkyDump tells you what bathrooms are available in your office before you get up, so that you don't have to walk around looking for one that is free. You can check out a demo of the app <a href="http://skydump.info" target="_blank">here</a>, or below.
         </p>
     </section>
 

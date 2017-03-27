@@ -35,7 +35,7 @@
                 <h2>My name is <span id="tz-about-me" class="tz-inline tz-highlight">Isaac Tozer</span>. I'm a full stack web developer and interface designer. I like to make things people interact with. Take a look at some of my recent projects. <span id="tz-contact-me" class="tz-inline tz-highlight">Contact</span> me.</h2>
             -->
                 <h1>Isaac Tozer</h1>
-                <h2>Hi. I'm a full stack web developer and interface designer. I like to make things people interact with. Take a look at some of my recent projects.</h2>
+                <h2>Hi. I'm a full stack web developer and interface designer. I like to make things people interact with. Check out some of my work below.</h2>
 
             </div>
             <div class="tz-spacer"></div>

@@ -9,8 +9,19 @@
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     -->
     <script src="dist/scripts.min.js" type="text/javascript" async></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <link rel="stylesheet" type="text/css" href="dist/styles.min.css">
     <!--<link href="https://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans:300,400,600" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico" />
+
+
+<!--
+    <button
+        class="g-recaptcha"
+        data-sitekey="6LekIRsUAAAAANlOOfJ3OIz4Bj2dEFP3NwSTrie4"
+        data-callback="YourOnSubmitFn">
+        Submit
+    </button>
+-->

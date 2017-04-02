@@ -15,6 +15,7 @@
     ready(function() {
         var dhButtons, dhElements, i;
 
+        initContactForm();
         initLazyLoad("img.tz-lazy[data-src]");
         //initLazyDisplay("img.tz-lazy-display");
         initLazyDisplay("tz-lazy-display");
@@ -188,6 +189,46 @@
             //translateCoords(fg, cursorDirection.directionX * 180, cursorDirection.directionY * 50);
             translateCoords(fg, cursorDirection.directionX * 80, cursorDirection.directionY * 20);
         });
+    }
+
+    function initContactForm() {
+        var contactLink = document.getElementById("tz-contact-link"),
+        form = document.getElementById("tz-contact"),
+        overlay = document.getElementById("tz-contact-overlay");
+
+        form.addEventListener("click", function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
+        window.addEventListener("click", hideForm)
+
+        contactLink.addEventListener("click", function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleFormDisplay();
+        });
+
+        function toggleFormDisplay() {
+            if (form.classList.contains("display")) {
+                //hide
+                hideForm();
+            } else {
+                //display
+                form.classList.add("display");
+                overlay.classList.add("display");
+                setTimeout(function() {
+                    overlay.classList.add("fadeIn");
+                },50);
+            }
+        }
+
+        function hideForm() {
+            form.classList.remove("display");
+            overlay.classList.remove("display");
+            overlay.classList.remove("fadeIn");
+        }
+
     }
 
     function initLazyDisplay(query) {

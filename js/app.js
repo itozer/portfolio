@@ -15,6 +15,7 @@
     ready(function() {
         var dhButtons, dhElements, i;
 
+        initContactForm();
         initLazyLoad("img.tz-lazy[data-src]");
         //initLazyDisplay("img.tz-lazy-display");
         initLazyDisplay("tz-lazy-display");
@@ -188,6 +189,104 @@
             //translateCoords(fg, cursorDirection.directionX * 180, cursorDirection.directionY * 50);
             translateCoords(fg, cursorDirection.directionX * 80, cursorDirection.directionY * 20);
         });
+    }
+
+    function initContactForm() {
+        var contactLink = document.getElementById("tz-contact-link"),
+        contactSubmit = document.getElementById("tz-contact-submit"),
+        form = document.getElementById("tz-contact"),
+        overlay = document.getElementById("tz-contact-overlay");
+
+        form.addEventListener("click", function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
+        window.addEventListener("click", hideForm)
+
+        contactLink.addEventListener("click", function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleFormDisplay();
+        });
+
+        contactSubmit.addEventListener("click", function() {
+            if (validateForm()) {
+                //submit
+                console.log("submit");
+            } else {
+                console.log("fail");
+            }
+        });
+
+        function toggleFormDisplay() {
+            if (form.classList.contains("display")) {
+                //hide
+                hideForm();
+            } else {
+                //display
+                form.classList.add("display");
+                overlay.classList.add("display");
+                setFocus(document.getElementById("tz-contact-name"));
+                setTimeout(function() {
+                    overlay.classList.add("fadeIn");
+                    form.classList.add("fadeIn");
+                },10);
+            }
+        }
+
+        function hideForm() {
+            form.classList.remove("fadeIn");
+            overlay.classList.remove("fadeIn");
+            setTimeout(function() {
+                form.classList.remove("display");
+                overlay.classList.remove("display");
+            },300);
+        }
+
+        function validateForm() {
+            var email = document.getElementById("tz-contact-email"),
+            message = document.getElementById("tz-contact-message"),
+            name = document.getElementById("tz-contact-name"),
+            rtn = true;
+
+            if (message.value.trim().length <= 0) {
+                message.classList.add("invalid");
+                setFocus(message);
+                rtn = false;
+            } else {
+                message.classList.remove("invalid");
+            }
+
+            if (!validateEmail(email.value)) {
+                email.classList.add("invalid");
+                setFocus(email);
+                rtn = false;
+            } else {
+                email.classList.remove("invalid");
+            }
+
+            if (name.value.trim().length <= 0) {
+                name.classList.add("invalid");
+                setFocus(name);
+                rtn = false;
+            } else {
+                name.classList.remove("invalid");
+            }
+
+            return rtn;
+        }
+
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        function setFocus(el) {
+            el.focus()
+            el.setSelectionRange(0, el.value.length);
+        }
+
     }
 
     function initLazyDisplay(query) {

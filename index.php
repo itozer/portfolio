@@ -5,22 +5,6 @@
 </head>
 <body>
 
-
-
-
-<!--
-    <a id="tz-contact-cancel" class="tz-contact-button tz-dh">
-        <div class="tz-contact-button-wrapper tz-dh-bg-wrapper">
-            <div class="tz-contact-button-image-wrapper tz-dh-bg">
-                <p>Cancel</p>
-            </div>
-        </div>
-        <div class="tz-contact-button-overlay-wrapper tz-dh-fg-wrapper">
-            <div class="tz-contact-button-overlay tz-dh-fg"></div>
-        </div>
-    </a>
--->
-
 <?php
     $page = "";
     include("include/header_top.php");
@@ -30,10 +14,6 @@
         <section id="tz-header">
             <div class="tz-spacer"></div>
             <div id="tz-header-text-wrapper">
-                <!--
-                <h1>Hi!</h1>
-                <h2>My name is <span id="tz-about-me" class="tz-inline tz-highlight">Isaac Tozer</span>. I'm a full stack web developer and interface designer. I like to make things people interact with. Take a look at some of my recent projects. <span id="tz-contact-me" class="tz-inline tz-highlight">Contact</span> me.</h2>
-            -->
                 <h1>Isaac Tozer</h1>
                 <h2>Hi. I'm a full stack web developer and interface designer. I like to make things people interact with. Check out some of my work below.</h2>
 
@@ -41,6 +21,7 @@
             <div class="tz-spacer"></div>
         </section>
 
+<!--
         <section id="tz-contact" style="left: -9999px;">
             <div class="tz-spacer"></div>
             <div id="tz-header-contact-wrapper">
@@ -58,7 +39,6 @@
                     <a id="tz-contact-cancel" class="tz-contact-button tz-dh animate">
                         <div class="tz-contact-button-wrapper tz-dh-bg-wrapper">
                             <div class="tz-contact-button-image-wrapper tz-dh-bg">
-                                <!--<div class="tz-contact-button-image"></div>-->
                                 <p>Cancel</p>
                             </div>
                         </div>
@@ -70,7 +50,6 @@
                     <a id="tz-contact-send" class="tz-contact-button tz-dh animate">
                         <div class="tz-contact-button-wrapper tz-dh-bg-wrapper">
                             <div class="tz-contact-button-image-wrapper tz-dh-bg">
-                                <!--<div class="tz-contact-button-image"></div>-->
                                 <p>Send</p>
                             </div>
                         </div>
@@ -78,6 +57,7 @@
                             <div class="tz-contact-button-overlay tz-dh-fg"></div>
                         </div>
                     </a>
+                -->
 
                 <!--
                     <div id="tz-send-contact" class="tz-contact-button tz-directional-button">
@@ -89,12 +69,14 @@
                         <div class="tz-directional-button-overlay"></div>
                     </div>
                 -->
+                <!--
 
                 </div>
                 <div style="clear: both;"></div>
             </div>
             <div class="tz-spacer"></div>
         </section>
+    -->
     </div>
 
     <section id="tz-projects">

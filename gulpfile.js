@@ -25,7 +25,7 @@ gulp.task('scripts', function() {
 gulp.task('css', function() {
   return gulp.src(cssFiles)
     .pipe(concat('styles.css'))
-    .pipe(cleanCSS({compatibility: 'ie10'}))
+    .pipe(cleanCSS({compatibility: '*'}))
     .pipe(rename('styles.min.css'))
     .pipe(gulp.dest(cssDest));
 });

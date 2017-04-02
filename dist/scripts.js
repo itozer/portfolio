@@ -518,8 +518,8 @@ function submitForm(captchaResponse) {
     validation.message = message.value,
     validation.name = name.value,
     http = new XMLHttpRequest();
-    url = "contactform.php";
-    //url = "https://www.isaactozer.com/contactform";
+    //url = "contactform.php";
+    url = "https://www.isaactozer.com/contactform";
     params = Object.keys(validation).map(function(key) {
         return key + '=' + encodeURIComponent(validation[key]);
     }).join('&');

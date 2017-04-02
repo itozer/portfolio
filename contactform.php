@@ -2,7 +2,6 @@
 
 $skynet = json_decode('{"success": false}', true);
 
-/*
 if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']) && isset($_POST['secret']) && isset($_POST['response'])) {
 
     $response = array(
@@ -13,6 +12,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']) 
         "response" => $_POST['response']
     );
 
+/*
     //verify with google this is not skynet
     $url = 'https://www.google.com/recaptcha/api/siteverify';
     $data = array("secret" => $response["secret"], "response" => $response["response"]);
@@ -27,6 +27,9 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']) 
     );
     $context  = stream_context_create($options);
     $result = file_get_contents($url, false, $context);
+*/
+
+$skynet = '{"success": true}';
 
     if ($result === FALSE) {
         // Handle error
@@ -50,7 +53,6 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']) 
     }
 
 }
-*/
 
 echo json_encode($skynet);
 

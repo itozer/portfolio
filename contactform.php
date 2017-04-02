@@ -2,6 +2,7 @@
 
 $skynet = json_decode('{"success": false}', true);
 
+/*
 if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']) && isset($_POST['secret']) && isset($_POST['response'])) {
 
     $response = array(
@@ -28,7 +29,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']) 
     $result = file_get_contents($url, false, $context);
 
     if ($result === FALSE) {
-        /* Handle error */
+        // Handle error
         //$skynet = json_decond('{"success": false}', true);
     } else {
         //if this is not skynet, send an email
@@ -49,6 +50,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']) 
     }
 
 }
+*/
 
 echo json_encode($skynet);
 

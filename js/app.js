@@ -1,4 +1,4 @@
-(function() {
+var tz = (function() {
     "use strict";
 
     var cursorDirection = {};
@@ -19,7 +19,7 @@
         initLazyLoad("img.tz-lazy[data-src]");
         //initLazyDisplay("img.tz-lazy-display");
         initLazyDisplay("tz-lazy-display");
-        initContactAnimation();
+        //initContactAnimation();
         initNavigationAnimation();
         initPetdentalCarausel();
 
@@ -202,7 +202,9 @@
             e.stopPropagation();
         });
 
-        window.addEventListener("click", hideForm)
+        window.addEventListener("click", function() {
+            hideForm(form, overlay);
+        });
 
         contactLink.addEventListener("click", function(e) {
             e.preventDefault();
@@ -211,18 +213,18 @@
         });
 
         contactSubmit.addEventListener("click", function() {
-            if (validateForm()) {
-                //submit
-                console.log("submit");
-            } else {
-                console.log("fail");
-            }
+            validateForm(function(validation) {
+                if (validation.valid) {
+                    //verify with google this is not skynet
+                    grecaptcha.execute();
+                }
+            });
         });
 
         function toggleFormDisplay() {
             if (form.classList.contains("display")) {
                 //hide
-                hideForm();
+                hideForm(form, overlay);
             } else {
                 //display
                 form.classList.add("display");
@@ -235,16 +237,7 @@
             }
         }
 
-        function hideForm() {
-            form.classList.remove("fadeIn");
-            overlay.classList.remove("fadeIn");
-            setTimeout(function() {
-                form.classList.remove("display");
-                overlay.classList.remove("display");
-            },300);
-        }
-
-        function validateForm() {
+        function validateForm(cb) {
             var email = document.getElementById("tz-contact-email"),
             message = document.getElementById("tz-contact-message"),
             name = document.getElementById("tz-contact-name"),
@@ -274,7 +267,7 @@
                 name.classList.remove("invalid");
             }
 
-            return rtn;
+            cb({valid: rtn, name: name.value.trim(), email: email.value, message: message.value.trim()});
         }
 
         function validateEmail(email) {
@@ -287,6 +280,15 @@
             el.setSelectionRange(0, el.value.length);
         }
 
+    }
+
+    function hideForm(form, overlay) {
+        form.classList.remove("fadeIn");
+        overlay.classList.remove("fadeIn");
+        setTimeout(function() {
+            form.classList.remove("display");
+            overlay.classList.remove("display");
+        },300);
     }
 
     function initLazyDisplay(query) {
@@ -358,48 +360,6 @@
                 window.removeEventListener("load", lazyLoadImages);
                 window.removeEventListener("resize", lazyLoadImages);
                 window.removeEventListener("scroll", lazyLoadImages);
-            }
-        }
-    }
-
-    function initContactAnimation() {
-        var cancelButton = document.getElementById("tz-contact-cancel"),
-        contactButton = document.getElementById("tz-contact-me"),
-        contactContainer = document.getElementById("tz-contact"),
-        dhButtons,
-        helloContainer = document.getElementById("tz-header"),
-        i;
-
-        if (helloContainer && contactButton) {
-            contactButton.addEventListener("click", toggleContact);
-            cancelButton.addEventListener("click", toggleContact);
-        }
-
-        function toggleContact() {
-            var width = window.innerWidth || document.documentElement.clientWidth;
-            if (helloContainer.classList.contains("hide")) {
-                //show welcome text. hide contact form
-                contactContainer.classList.add("hide");
-                setPosition(contactContainer, -width, 0);
-
-                helloContainer.classList.remove("hide");
-                setPosition(helloContainer, 0, 0);
-            } else {
-                //show contact form. hide welcome text.
-                helloContainer.classList.add("hide");
-                setPosition(helloContainer, width, 0);
-
-                contactContainer.classList.remove("hide");
-                setPosition(contactContainer, 0, 0);
-
-                dhButtons = document.querySelectorAll(".tz-contact-button.animate");
-                if (dhButtons) {
-                    for (i = 0; i < dhButtons.length; i++) {
-                        setDirectionalHoverButton(dhButtons[i]);
-                        dhButtons[i].classList.remove("animate");
-                    }
-                }
-
             }
         }
     }
@@ -537,6 +497,55 @@
         }
     }
 
-
+    return {
+        hideForm: hideForm
+    }
 
 })();
+
+//recaptcha callback
+function submitForm(captchaResponse) {
+    var http, url, params, validation = {};
+    var email = document.getElementById("tz-contact-email"),
+        form = document.getElementById("tz-contact"),
+        message = document.getElementById("tz-contact-message"),
+        name = document.getElementById("tz-contact-name"),
+        overlay = document.getElementById("tz-contact-overlay");
+
+    validation.response = captchaResponse;
+    validation.secret = "6LekIRsUAAAAAOLcfUpjb3h3wFzS-azLwstSdFV7   ";
+    validation.email = email.value,
+    validation.message = message.value,
+    validation.name = name.value,
+    http = new XMLHttpRequest();
+    url = "contact.php";
+    params = Object.keys(validation).map(function(key) {
+        return key + '=' + encodeURIComponent(validation[key]);
+    }).join('&');
+
+    http.open("POST", url, true);
+
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    http.onreadystatechange = function() {
+        var response;
+        if(http.readyState == 4 && http.status == 200) {
+            console.log(http.responseText);
+            response = JSON.parse(http.responseText);
+            if (response.success) {
+                alert("Thanks for the message!");
+                grecaptcha.reset();
+                email.value = "";
+                message.value = "";
+                name.value = "";
+                tz.hideForm(form, overlay);
+
+            } else {
+                alert("Ooops. There was an error sending your message. Please try again.")
+                tz.hideForm(form, overlay);
+            }
+        }
+    }
+    http.send(params);
+
+}

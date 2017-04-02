@@ -13,7 +13,7 @@
         </div>
         <div id="tz-bread-right">
             <a id="tz-contact-link" class="unselectable">Contact</a>
-            <a href="about">About</a>
+            <!-- <a href="about">About</a> -->
         </div>
 
         <div id="tz-contact">
@@ -28,6 +28,13 @@
             <textarea id="tz-contact-message" name="message" style="height:130px"></textarea>
 
             <button id="tz-contact-submit">Submit</button>
+
+            <div class="g-recaptcha"
+                data-sitekey="6LekIRsUAAAAANlOOfJ3OIz4Bj2dEFP3NwSTrie4"
+                data-callback="submitForm"
+                data-size="invisible">
+            </div>
+
 
         </div>
 

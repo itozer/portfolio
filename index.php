@@ -21,62 +21,6 @@
             <div class="tz-spacer"></div>
         </section>
 
-<!--
-        <section id="tz-contact" style="left: -9999px;">
-            <div class="tz-spacer"></div>
-            <div id="tz-header-contact-wrapper">
-                <div id="tz-contact-group-1" class="tz-contact-group">
-                    <input type="text" name="name" placeholder="Name">
-                    <input type="text" name="email" placeholder="Email">
-                </div>
-                <div id="tz-contact-group-2" class="tz-contact-group">
-                    <textarea name="message" placeholder="Message"></textarea>
-                </div>
-                <div style="clear: both;"></div>
-                <div id="tz-contact-actions">
-
-
-                    <a id="tz-contact-cancel" class="tz-contact-button tz-dh animate">
-                        <div class="tz-contact-button-wrapper tz-dh-bg-wrapper">
-                            <div class="tz-contact-button-image-wrapper tz-dh-bg">
-                                <p>Cancel</p>
-                            </div>
-                        </div>
-                        <div class="tz-contact-button-overlay-wrapper tz-dh-fg-wrapper">
-                            <div class="tz-contact-button-overlay tz-dh-fg"></div>
-                        </div>
-                    </a>
-
-                    <a id="tz-contact-send" class="tz-contact-button tz-dh animate">
-                        <div class="tz-contact-button-wrapper tz-dh-bg-wrapper">
-                            <div class="tz-contact-button-image-wrapper tz-dh-bg">
-                                <p>Send</p>
-                            </div>
-                        </div>
-                        <div class="tz-contact-button-overlay-wrapper tz-dh-fg-wrapper">
-                            <div class="tz-contact-button-overlay tz-dh-fg"></div>
-                        </div>
-                    </a>
-                -->
-
-                <!--
-                    <div id="tz-send-contact" class="tz-contact-button tz-directional-button">
-                        <div class="tz-contact-button-image"></div><p>Send</p>
-                        <div class="tz-directional-button-overlay"></div>
-                    </div>
-                    <div id="tz-cancel-contact" class="tz-contact-button tz-directional-button">
-                        <div class="tz-contact-button-image"></div><p>Cancel</p>
-                        <div class="tz-directional-button-overlay"></div>
-                    </div>
-                -->
-                <!--
-
-                </div>
-                <div style="clear: both;"></div>
-            </div>
-            <div class="tz-spacer"></div>
-        </section>
-    -->
     </div>
 
     <section id="tz-projects">

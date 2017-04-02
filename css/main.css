@@ -782,3 +782,7 @@ p {
 #tz-petdental-carausel-previous.disabled:after {
     border-right: 500px solid #777;
 }
+
+.grecaptcha-badge {
+    display: none;
+}

@@ -520,6 +520,7 @@ console.log("submitForm");
     http = new XMLHttpRequest();
     //url = "contact.php";
     url = "https://www.isaactozer.com/contact.php";
+    //url = "//contact.php";
     params = Object.keys(validation).map(function(key) {
         return key + '=' + encodeURIComponent(validation[key]);
     }).join('&');
@@ -531,8 +532,9 @@ console.log("after open submitForm");
 
     http.onreadystatechange = function() {
         var response;
+console.log("state change");
         if(http.readyState == 4 && http.status == 200) {
-            console.log(http.responseText);
+console.log(http.responseText);
             response = JSON.parse(http.responseText);
             if (response.success) {
                 alert("Thanks for the message!");

@@ -2,8 +2,7 @@
     <div id="tz-header-top-line"></div>
     <div id="tz-bread-crumb">
         <div id="tz-bread-left">
-            <!--<a href="http://www.isaactozer.com/" id="tz-go-home">-->
-            <a href="index" id="tz-go-home">
+            <a href="https://www.isaactozer.com/" id="tz-go-home">
                 <img id="tz-logo" src="images/logo_50x50.png" width="42" height="42" alt="logo">
                 <span>Isaac Tozer</span>
             </a>

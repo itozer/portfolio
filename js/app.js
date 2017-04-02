@@ -550,6 +550,8 @@ console.log(http.responseText);
             }
         }
     }
+console.log("before send");
     http.send(params);
+console.log("after send");
 
 }

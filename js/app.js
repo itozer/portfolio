@@ -504,7 +504,7 @@ var tz = (function() {
 
 //recaptcha callback
 function submitForm(captchaResponse) {
-console.log("submitForm");
+//console.log("submitForm");
     var http, url, params, validation = {};
     var email = document.getElementById("tz-contact-email"),
         form = document.getElementById("tz-contact"),
@@ -518,8 +518,8 @@ console.log("submitForm");
     validation.message = message.value,
     validation.name = name.value,
     http = new XMLHttpRequest();
-    //url = "contactform.php";
-    url = "https://www.isaactozer.com/contactform";
+    url = "contactform.php";
+    //url = "https://www.isaactozer.com/contactform";
     params = Object.keys(validation).map(function(key) {
         return key + '=' + encodeURIComponent(validation[key]);
     }).join('&');

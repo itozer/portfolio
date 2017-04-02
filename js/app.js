@@ -518,9 +518,8 @@ console.log("submitForm");
     validation.message = message.value,
     validation.name = name.value,
     http = new XMLHttpRequest();
-    //url = "contact.php";
-    url = "https://www.isaactozer.com/contact.php";
-    //url = "//contact.php";
+    //url = "contactform.php";
+    url = "https://www.isaactozer.com/contactform.php";
     params = Object.keys(validation).map(function(key) {
         return key + '=' + encodeURIComponent(validation[key]);
     }).join('&');

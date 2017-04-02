@@ -504,6 +504,7 @@ var tz = (function() {
 
 //recaptcha callback
 function submitForm(captchaResponse) {
+console.log("submitForm");
     var http, url, params, validation = {};
     var email = document.getElementById("tz-contact-email"),
         form = document.getElementById("tz-contact"),
@@ -524,6 +525,7 @@ function submitForm(captchaResponse) {
     }).join('&');
 
     http.open("POST", url, true);
+console.log("after open submitForm");
 
     http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 

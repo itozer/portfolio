@@ -19,7 +19,6 @@ var tz = (function() {
         initLazyLoad("img.tz-lazy[data-src]");
         //initLazyDisplay("img.tz-lazy-display");
         initLazyDisplay("tz-lazy-display");
-        //initContactAnimation();
         initNavigationAnimation();
         initPetdentalCarausel();
 
@@ -518,7 +517,8 @@ function submitForm(captchaResponse) {
     validation.message = message.value,
     validation.name = name.value,
     http = new XMLHttpRequest();
-    url = "contact.php";
+    //url = "contact.php";
+    url = "https://www.isaactozer.com/contact.php";
     params = Object.keys(validation).map(function(key) {
         return key + '=' + encodeURIComponent(validation[key]);
     }).join('&');

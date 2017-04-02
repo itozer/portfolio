@@ -519,21 +519,21 @@ console.log("submitForm");
     validation.name = name.value,
     http = new XMLHttpRequest();
     //url = "contactform.php";
-    url = "https://www.isaactozer.com/contactform.php";
+    url = "https://www.isaactozer.com/contactform";
     params = Object.keys(validation).map(function(key) {
         return key + '=' + encodeURIComponent(validation[key]);
     }).join('&');
 
     http.open("POST", url, true);
-console.log("after open submitForm");
+//console.log("after open submitForm");
 
     http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     http.onreadystatechange = function() {
         var response;
-console.log("state change");
+//console.log("state change");
         if(http.readyState == 4 && http.status == 200) {
-console.log(http.responseText);
+//console.log(http.responseText);
             response = JSON.parse(http.responseText);
             if (response.success) {
                 alert("Thanks for the message!");
@@ -549,8 +549,8 @@ console.log(http.responseText);
             }
         }
     }
-console.log("before send");
+//console.log("before send");
     http.send(params);
-console.log("after send");
+//console.log("after send");
 
 }

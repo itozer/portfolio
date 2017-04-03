@@ -214,6 +214,7 @@ var tz = (function() {
         contactSubmit.addEventListener("click", function() {
             validateForm(function(validation) {
                 if (validation.valid) {
+                    document.getElementById("tz-contact-submit").classList.add("sending");
                     //verify with google this is not skynet
                     grecaptcha.execute();
                 }
@@ -504,9 +505,9 @@ var tz = (function() {
 
 //recaptcha callback
 function submitForm(captchaResponse) {
-console.log("submitForm");
     var http, url, params, validation = {};
-    var email = document.getElementById("tz-contact-email"),
+    var button = document.getElementById("tz-contact-submit"),
+        email = document.getElementById("tz-contact-email"),
         form = document.getElementById("tz-contact"),
         message = document.getElementById("tz-contact-message"),
         name = document.getElementById("tz-contact-name"),
@@ -525,32 +526,28 @@ console.log("submitForm");
     }).join('&');
 
     http.open("POST", url, true);
-console.log("after open submitForm");
 
     http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     http.onreadystatechange = function() {
         var response;
-console.log("state change");
         if(http.readyState == 4 && http.status == 200) {
-console.log(http.responseText);
             response = JSON.parse(http.responseText);
             if (response.success) {
-                alert("Thanks for the message!");
                 grecaptcha.reset();
                 email.value = "";
                 message.value = "";
                 name.value = "";
+                button.classList.remove("sending");
                 tz.hideForm(form, overlay);
 
             } else {
                 alert("Ooops. There was an error sending your message. Please try again.")
+                button.classList.remove("sending");
                 tz.hideForm(form, overlay);
             }
         }
     }
-console.log("before send");
     http.send(params);
-console.log("after send");
 
 }

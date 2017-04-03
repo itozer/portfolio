@@ -564,6 +564,15 @@ p {
     background-color: #fff;
 }
 
+#tz-contact-submit.sending, #tz-contact-submit.sending:hover {
+    background-image: url("../images/spinner.gif");
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-position: center center;
+    color: rgba(0,0,0,0);
+    opacity: 0.8;
+}
+
 #tz-contact.display, #tz-contact-overlay.display {
     display: block;
 }

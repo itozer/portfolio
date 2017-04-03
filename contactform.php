@@ -12,7 +12,6 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']) 
         "response" => $_POST['response']
     );
 
-/*
     //verify with google this is not skynet
     $url = 'https://www.google.com/recaptcha/api/siteverify';
     $data = array("secret" => $response["secret"], "response" => $response["response"]);
@@ -27,9 +26,6 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']) 
     );
     $context  = stream_context_create($options);
     $result = file_get_contents($url, false, $context);
-*/
-
-$skynet = '{"success": true}';
 
     if ($result === FALSE) {
         // Handle error
@@ -42,13 +38,16 @@ $skynet = '{"success": true}';
 
             //send email
             $subject = "Contact from portfolio website";
+            $message = "From: " . $response["name"] . "\r\n\r\n" .
+                "Email: " . $response["email"] . "\r\n\r\n" .
+                "Message: " . $response["message"];
             $headers = 'From: portfolio-contact@isaactozer.com' . "\r\n" .
                 'Reply-To: itozer@gmail.com' . "\r\n" .
                 'X-Mailer: PHP/' . phpversion();
 
-            mail("itozer@gmail.com", $subject, $response["message"], $headers);
+            $mailStatus = mail("itozer@gmail.com", $subject, $message, $headers);
 
-            array_push($skynet, "email", true);
+            array_push($skynet, "email", $mailStatus);
         }
     }
 

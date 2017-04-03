@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
 -->
     <script src="dist/scripts.min.js" type="text/javascript" async defer></script>
-    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
     <link rel="stylesheet" type="text/css" href="dist/styles.min.css">
+    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" rel="stylesheet">

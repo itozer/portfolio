@@ -16,14 +16,13 @@
         </div>
 
         <div id="tz-contact">
-
-            <label for="name">Name:</label>
+            <label for="tz-contact-name">Name:</label>
             <input type="text" id="tz-contact-name" name="name">
 
-            <label for="email">Email:</label>
+            <label for="tz-contact-email">Email:</label>
             <input type="text" id="tz-contact-email" name="email">
 
-            <label for="subject">Message:</label>
+            <label for="tz-contact-message">Message:</label>
             <textarea id="tz-contact-message" name="message" style="height:130px"></textarea>
 
             <button id="tz-contact-submit">Submit</button>
@@ -33,8 +32,6 @@
                 data-callback="submitForm"
                 data-size="invisible">
             </div>
-
-
         </div>
 
     </div>

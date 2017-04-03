@@ -533,6 +533,7 @@ function submitForm(captchaResponse) {
         var response;
         if(http.readyState == 4 && http.status == 200) {
             response = JSON.parse(http.responseText);
+console.log(response);
             if (response.success) {
                 grecaptcha.reset();
                 email.value = "";

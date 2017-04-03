@@ -4,10 +4,10 @@
     <?php include("include/head.php"); ?>
     <script>
         // This is the URL of the video you want to load
-        var videoUrl = 'http://www.vimeo.com/199090987';
+        var videoUrl = 'https://www.vimeo.com/199090987';
         // This is the oEmbed endpoint for Vimeo (we're using JSON)
         // (Vimeo also supports oEmbed discovery. See the PHP example.)
-        var endpoint = 'http://www.vimeo.com/api/oembed.json';
+        var endpoint = 'https://www.vimeo.com/api/oembed.json';
         // Tell Vimeo what function to call
         var callback = 'embedVideo';
         // Put together the URL

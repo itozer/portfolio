@@ -2,6 +2,10 @@
     position: relative;
 }
 
+a:link.tz-dh, a:visited.tz-dh a:hover.tz-dh a:active.tz-dh {
+    color: #fff;
+}
+
 .tz-dh-bg-wrapper {
 
 }

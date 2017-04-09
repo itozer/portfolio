@@ -52,10 +52,6 @@ p a:hover {
     text-decoration: underline;
 }
 
-.tz-project a:link, .tz-project a:visited, .tz-project a:hover, .tz-project a:active {
-    color: #fff;
-}
-
 .unselectable {
     user-select: none;
     -moz-user-select: none;
@@ -63,7 +59,6 @@ p a:hover {
     -webkit-user-select: none;
     -o-user-select: none;
 }
-
 
 h1 {
     font-family: 'Lato', sans-serif;
@@ -565,7 +560,7 @@ p {
     font-family: 'Source Sans Pro', sans-serif;
     margin: 10px 0 0 0;
     cursor: pointer;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out;
 }
 
 #tz-contact-submit:hover {
@@ -584,8 +579,10 @@ p {
 
 #tz-contact-submit.sent, #tz-contact-submit.sent:hover {
     background-color: #A4FF67;
+    width: 180px;
+    height: 50px;
+    font-size: 1.0em;
 }
-
 
 #tz-contact.display, #tz-contact-overlay.display {
     display: block;

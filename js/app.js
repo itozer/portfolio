@@ -288,11 +288,7 @@ var tz = (function() {
         setTimeout(function() {
             form.classList.remove("display");
             overlay.classList.remove("display");
-            if (button !== undefined) {
-                button.classList.remove("sent");
-                button.innerHTML = "Submit";
-            }
-        },500);
+        },300);
     }
 
     function initLazyDisplay(query) {
@@ -539,13 +535,17 @@ function submitForm(captchaResponse) {
             response = JSON.parse(http.responseText);
             if (response.success) {
                 grecaptcha.reset();
-                email.value = "";
-                message.value = "";
-                name.value = "";
                 button.classList.remove("sending");
                 button.classList.add("sent");
                 button.innerHTML = "Sent!";
-                tz.hideForm(form, overlay, button);
+                setTimeout(function() {
+                    tz.hideForm(form, overlay, button);
+                    email.value = "";
+                    message.value = "";
+                    name.value = "";
+                    button.classList.remove("sent");
+                    button.innerHTML = "Submit";
+                }, 3500);
 
             } else {
                 alert("Ooops. There was an error sending your message. Please try again.")

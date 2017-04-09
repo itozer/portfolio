@@ -49,13 +49,7 @@
             </div>
         </div>
 
-        <p>Watch the short video below for a demonstration of the CresPrint software in action.</p>
-
-        <div class="tz-project-screen">
-            <div id="tz-project-video-wrapper">Loading video...</div>
-        </div>
-
-        <p>The screens below demonstrate text and image editing on a brief and brochure in the CresPrint Editor.</p>
+        <p>Text can be easily edited and formatted.</p>
 
         <div class="tz-project-screen">
             <div class="tz-project-screen-wrapper">
@@ -63,10 +57,18 @@
             </div>
         </div>
 
+        <p>Images can be replaced, repositioned, and resized. CresPrint ensures only images of at least 300DPI are used.</p>
+
         <div class="tz-project-screen">
             <div class="tz-project-screen-wrapper">
                 <img src="images/projects/cresprint/cresprint_3_s.png" class="tz-lazy-display" width="1300" height="800" alt="cresprint3">
             </div>
+        </div>
+
+        <p>Watch the short video below for a software demonstration.</p>
+
+        <div class="tz-project-screen">
+            <div id="tz-project-video-wrapper">Loading video...</div>
         </div>
 
     </section>

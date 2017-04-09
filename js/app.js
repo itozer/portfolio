@@ -292,7 +292,7 @@ var tz = (function() {
                 button.classList.remove("sent");
                 button.innerHTML = "Submit";
             }
-        },300);
+        },500);
     }
 
     function initLazyDisplay(query) {

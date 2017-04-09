@@ -86,8 +86,37 @@
           height: 90px;
       }
 
-      #tz-bread-right {
-          display: none;
+      #tz-contact-link {
+          /*display: none;*/
+          color: rgba(0,0,0,0) !important;
+          font-size: 0;
+          background-image: url("../images/mobile_contact_btn.png");
+          background-repeat: no-repeat;
+          background-position: right center;
+          display: inline-block;
+          width: 30px;
+          height: 23px;
+      }
+
+      #tz-contact {
+          width: 100%;
+      }
+
+      #tz-logo {
+          width: 36px;
+          height: 36px;
+      }
+
+      #tz-bread-left {
+          margin-left: 5px;
+      }
+
+      #tz-bread-crumb {
+          font-size: 1.2em;
+      }
+
+      #tz-bread-left a > span, #tz-bread-left > span {
+          margin: 11px 0 0 6px;
       }
 
   }

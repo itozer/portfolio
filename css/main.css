@@ -52,6 +52,10 @@ p a:hover {
     text-decoration: underline;
 }
 
+.tz-project a:link, .tz-project a:visited, .tz-project a:hover, .tz-project a:active {
+    color: #fff;
+}
+
 .unselectable {
     user-select: none;
     -moz-user-select: none;
@@ -577,6 +581,11 @@ p {
     color: rgba(0,0,0,0);
     opacity: 0.8;
 }
+
+#tz-contact-submit.sent, #tz-contact-submit.sent:hover {
+    background-color: #A4FF67;
+}
+
 
 #tz-contact.display, #tz-contact-overlay.display {
     display: block;

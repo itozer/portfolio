@@ -282,12 +282,16 @@ var tz = (function() {
 
     }
 
-    function hideForm(form, overlay) {
+    function hideForm(form, overlay, button) {
         form.classList.remove("fadeIn");
         overlay.classList.remove("fadeIn");
         setTimeout(function() {
             form.classList.remove("display");
             overlay.classList.remove("display");
+            if (button !== undefined) {
+                button.classList.remove("sent");
+                button.innerHTML = "Submit";
+            }
         },300);
     }
 
@@ -533,14 +537,15 @@ function submitForm(captchaResponse) {
         var response;
         if(http.readyState == 4 && http.status == 200) {
             response = JSON.parse(http.responseText);
-console.log(response);
             if (response.success) {
                 grecaptcha.reset();
                 email.value = "";
                 message.value = "";
                 name.value = "";
                 button.classList.remove("sending");
-                tz.hideForm(form, overlay);
+                button.classList.add("sent");
+                button.innerHTML = "Sent!";
+                tz.hideForm(form, overlay, button);
 
             } else {
                 alert("Ooops. There was an error sending your message. Please try again.")

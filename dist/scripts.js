@@ -1,7 +1,7 @@
 var tz = (function() {
     "use strict";
 
-    var cursorDirection = {};
+    var cursorDirection = {}, locked = false;
     cursorDirection.degree = 0;
 
     function ready(fn) {
@@ -214,6 +214,7 @@ var tz = (function() {
         contactSubmit.addEventListener("click", function() {
             validateForm(function(validation) {
                 if (validation.valid) {
+                    locked = true;
                     document.getElementById("tz-contact-submit").classList.add("sending");
                     //verify with google this is not skynet
                     grecaptcha.execute();
@@ -498,7 +499,8 @@ var tz = (function() {
     }
 
     return {
-        hideForm: hideForm
+        hideForm: hideForm,
+        locked: locked
     }
 
 })();
@@ -514,7 +516,7 @@ function submitForm(captchaResponse) {
         overlay = document.getElementById("tz-contact-overlay");
 
     validation.response = captchaResponse;
-    validation.secret = "6LekIRsUAAAAAOLcfUpjb3h3wFzS-azLwstSdFV7   ";
+    validation.secret = "6LekIRsUAAAAAOLcfUpjb3h3wFzS-azLwstSdFV7";
     validation.email = email.value,
     validation.message = message.value,
     validation.name = name.value,
@@ -545,12 +547,14 @@ function submitForm(captchaResponse) {
                     name.value = "";
                     button.classList.remove("sent");
                     button.innerHTML = "Submit";
+                    tz.locked = false;
                 }, 3500);
 
             } else {
                 alert("Ooops. There was an error sending your message. Please try again.")
                 button.classList.remove("sending");
                 tz.hideForm(form, overlay);
+                tz.locked = false;
             }
         }
     }

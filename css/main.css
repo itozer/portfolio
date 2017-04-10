@@ -560,7 +560,7 @@ p {
     font-family: 'Source Sans Pro', sans-serif;
     margin: 10px 0 0 0;
     cursor: pointer;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, width 0.4s cubic-bezier(0.68, -0.55, 0.265, 3.55), height 0.4s cubic-bezier(0.68, -0.55, 0.265, 3.55);
 }
 
 #tz-contact-submit:hover {
